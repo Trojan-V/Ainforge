@@ -1,0 +1,13 @@
+name = "Scoreboard Overhaul"
+filename = "scoreboardoverhaul-1.4.1-mc1.21.6.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/2YIQkF2v/versions/W7WQRavI/scoreboardoverhaul-1.4.1-mc1.21.6.jar"
+hash-format = "sha512"
+hash = "ba2ceb02a492d03fc2d9439d5c106e8c56138c4abb06b4a45eada218387c3b8486024b46f8a5a193ed5b976b13e037d8608ea81daa6a4693817e2a3cb663c306"
+
+[update]
+[update.modrinth]
+mod-id = "2YIQkF2v"
+version = "W7WQRavI"
