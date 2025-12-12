@@ -1,8 +1,20 @@
 hash-format = "sha256"
 
 [[files]]
+file = ".github/workflows/publish.yml"
+hash = "ebd4190646b086a1c6e50109a0c783a6a0a84afcc15cd672cca38fa442118add"
+
+[[files]]
+file = "ESM/soundsMuffled.dat"
+hash = "b6204127646d436cb8fbe9a9e2b3d1f92e0931e22f19b5754a8bd79d0f99835f"
+
+[[files]]
 file = "config/DistantHorizons.toml"
 hash = "863728cf2644dbe60e4d1d6118dbc9b492c3e509a54c476c1df4878ffa1982bc"
+
+[[files]]
+file = "config/betterf3.json"
+hash = "14bd54953ce2b25f425083ee944a882bdcb81f211ada4eb14c428c718a46bf4c"
 
 [[files]]
 file = "config/bettergrass.json"
@@ -22,7 +34,7 @@ hash = "55e93fcb21c3dadd6d6d3e0b28fe3475196da9498cedd6fbac3d79e75633c946"
 
 [[files]]
 file = "config/commandkeys.json"
-hash = "4f930a56052dc30a9bee38e17f48165452a21f9ebbd72419b67c24a1e7fae3d6"
+hash = "56101f1d7a746c82e1ef8d534310c2cece290a8dde18d3de19f341b3b82b64c0"
 
 [[files]]
 file = "config/extremesoundmuffler.json5"
@@ -50,11 +62,33 @@ hash = "65d95e1d7bec4cc49934fd9b9917350addd2ff4f66f99e2ac90b0ab65c3fbfc4"
 
 [[files]]
 file = "config/sodium-extra-options.json"
-hash = "47984432296c2fb177c9fe9cabb6b9c50f11bf657a3411ab46b8fe83bb1f601f"
+hash = "617604671b92dc3dd09271ba0305d8637625a51d293ec9b47aceb78739c2aa6a"
 
 [[files]]
 file = "config/sodium-options.json"
 hash = "ded4ccae4a94fb330cabd8485271598d201c211c76b161b442da478071d344e7"
+
+[[files]]
+file = "config/xaerominimap.txt"
+hash = "583222a70b3c9abcad35ed27604cab57dbeb906df1a9631a7c6701c1d432a46a"
+
+[[files]]
+file = "config/xaerominimap_entities.json"
+hash = "637d2ab7c990f4647bf3c933ddfd07ff419e8efd7a8a22fc4a7f13185ae7ff6f"
+
+[[files]]
+file = "config/xaeroworldmap.txt"
+hash = "b0fd80b089abbf8f778dca8be6e1ee2433ca3948c8294c4f518efdca7b7f64a5"
+
+[[files]]
+file = "mods/amecs.pw.toml"
+hash = "34c39399159939056ba7c21b0f0de32ed7472dbfe5673c23f00409b07a2ffeec"
+metafile = true
+
+[[files]]
+file = "mods/armor-hud.pw.toml"
+hash = "5e36a07933eb8085f95e29451719dd250286eadf7dab1b188af5817a1610c340"
+metafile = true
 
 [[files]]
 file = "mods/betterf3.pw.toml"
@@ -64,11 +98,6 @@ metafile = true
 [[files]]
 file = "mods/bettergrassify.pw.toml"
 hash = "d74546a98e3af1867539d80bdf9d188968920a7df8e57ccb3b7a55b36a37eb7a"
-metafile = true
-
-[[files]]
-file = "mods/borderless-fullscreen.pw.toml"
-hash = "150a20496f40bf24e2a49ca3ee0cec31578aec647c47c3dbc2b4afc7c12bb9b3"
 metafile = true
 
 [[files]]
@@ -102,6 +131,11 @@ hash = "d264afb5412f6f8e12d7ce75b4bfc8c752a5c41e520059593d583ce2e3490077"
 metafile = true
 
 [[files]]
+file = "mods/cubes-without-borders.pw.toml"
+hash = "a90139b002d632ba9256cb3e7e877945bf8e3afa5b191d1adc83c5e3eb72da4c"
+metafile = true
+
+[[files]]
 file = "mods/distanthorizons.pw.toml"
 hash = "547fcb6481c2cf682b9de98f0a719d27f0ba896d7b06076f2135f2abd470aea6"
 metafile = true
@@ -132,6 +166,11 @@ hash = "fbf9806c22ee5bccbe08f7dec15b742f5ae3a70caf186d6dce0d42f28790f559"
 metafile = true
 
 [[files]]
+file = "mods/forge-config-api-port.pw.toml"
+hash = "ea40c2f09338485de8ed94ae09c84182e2544ff166e5d9a33b9be8ea13d3f750"
+metafile = true
+
+[[files]]
 file = "mods/fzzy-config.pw.toml"
 hash = "bc4f9441d69eefd3d48ed921338fbad1d24d0ecc671f755a83de0ad9f6418d3c"
 metafile = true
@@ -152,13 +191,13 @@ hash = "8d40436970d9adcfe3c0b72c9f0cd1af217948469b091b0f07ca3df187ce2e61"
 metafile = true
 
 [[files]]
-file = "mods/language-reload.pw.toml"
-hash = "b2b08c129cb7adcf04abf7e96e718605841605a96c8cd7e61b6091cbaa79eb92"
+file = "mods/lithium.pw.toml"
+hash = "a63765eb780a36cd968e2777d2c20bea5e5ca3ccdd920e64964e3746cf2a7f0d"
 metafile = true
 
 [[files]]
-file = "mods/lithium.pw.toml"
-hash = "a63765eb780a36cd968e2777d2c20bea5e5ca3ccdd920e64964e3746cf2a7f0d"
+file = "mods/modelfix.pw.toml"
+hash = "14800fc12fd4b92497c0f26455523783bdf59194233bdaa71d4864b3d436929a"
 metafile = true
 
 [[files]]
@@ -192,11 +231,6 @@ hash = "88f9a71bf06f4959b220abab8542e4763747903e9e5ef150c38ae79c83870077"
 metafile = true
 
 [[files]]
-file = "mods/resourcepackcached.pw.toml"
-hash = "b37d48fabc34ff2ffa3fdd24df0cccacae73e74af41aca6d262602dd642aafee"
-metafile = true
-
-[[files]]
 file = "mods/resourcify.pw.toml"
 hash = "45ba29f2246237e7a5f85dbdbdb1f6472962f834a3d52e75786eb64a771bcf96"
 metafile = true
@@ -222,6 +256,16 @@ hash = "3ef916454266cdbcbd3f517c53b1e27b360caa5266bf1b44d0d627aeab643516"
 metafile = true
 
 [[files]]
+file = "mods/xaeros-minimap.pw.toml"
+hash = "d72a8ffcacdd19e6d71eccb4b112cf763bf75b2c438506e01ab0aa76e91c6325"
+metafile = true
+
+[[files]]
+file = "mods/xaeros-world-map.pw.toml"
+hash = "f3b0dc8728401319a897b51835b2b65898dc3b769aa1f1ed0a1f513bd91c409a"
+metafile = true
+
+[[files]]
 file = "mods/yacl.pw.toml"
 hash = "ec4a4b88462c742ea3bbd812dbbe321381b974bf9dd34bbb4f7d206dadc9a556"
 metafile = true
@@ -232,8 +276,12 @@ hash = "59e45ade7176229ff9750ae85356ba4a92b5124592dd09b0244c861cfda08575"
 metafile = true
 
 [[files]]
+file = "options.amecsapi.txt"
+hash = "9a166c1dd68dccc8770cd77c28597bdc278f337e50af9f3a07a2d10168aae8fa"
+
+[[files]]
 file = "options.txt"
-hash = "357fceb4c153c390782277c9b492ac0a21af653c94f898b30d3dfa0dd66595cc"
+hash = "90a59fecc9359b8b43a3e02d889515f10dcd3b795e583193a3f04c318ebf4db3"
 
 [[files]]
 file = "servers.dat"

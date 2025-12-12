@@ -3,10 +3,10 @@
   "profiles": [
     {
       "version": 4,
-      "name": "Default Profile",
+      "name": "PlayLegend Presets",
       "links": [],
       "addToHistory": "OFF",
-      "showHudMessage": "ON",
+      "showHudMessage": "OFF",
       "resumeRepeating": "OFF",
       "useRatelimit": "ON",
       "macros": [
@@ -45,14 +45,14 @@
           "showHudMessage": false,
           "resumeRepeating": false,
           "useRatelimit": true,
-          "conflictStrategy": "ASSERT",
+          "conflictStrategy": "SUBMIT",
           "sendMode": "SEND",
           "activationType": "HOLD",
           "spaceTicks": 0,
           "maxRepeats": 0,
           "keybind": {
             "version": 0,
-            "keyName": "key.keyboard.f",
+            "keyName": "key.keyboard.z",
             "limitKeyName": "key.keyboard.unknown"
           },
           "altKeybind": {
@@ -151,35 +151,6 @@
             {
               "version": 1,
               "string": "/cc shards ARMOR",
-              "delayTicks": 0
-            }
-          ]
-        },
-        {
-          "version": 6,
-          "addToHistory": false,
-          "showHudMessage": false,
-          "resumeRepeating": false,
-          "useRatelimit": true,
-          "conflictStrategy": "ASSERT",
-          "sendMode": "SEND",
-          "activationType": "HOLD",
-          "spaceTicks": 0,
-          "maxRepeats": 0,
-          "keybind": {
-            "version": 0,
-            "keyName": "key.keyboard.f",
-            "limitKeyName": "key.keyboard.left.shift"
-          },
-          "altKeybind": {
-            "version": 0,
-            "keyName": "key.keyboard.unknown",
-            "limitKeyName": "key.keyboard.unknown"
-          },
-          "messages": [
-            {
-              "version": 1,
-              "string": "/cc coins",
               "delayTicks": 0
             }
           ]
