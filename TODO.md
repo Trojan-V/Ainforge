@@ -6,6 +6,9 @@
 ## CCLive-Utilities
 - Warum funktioniert der "Animation Blocker" nicht?
 
+## Notes
+- Notizen für die CC-Kits bereitstellen
+
 ## Neue Mods
-- EuphoriaPatches
 - FancyMenu
+- Essential

@@ -32,6 +32,7 @@ jobs:
           name: 'Release ${{ github.ref_name }}'
           version: ${{ github.ref_name }}
           version-type: release
+          changelog-file: CHANGELOG.md
           loaders: |
             fabric
           game-versions: |

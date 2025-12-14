@@ -1,16 +1,12 @@
 hash-format = "sha256"
 
 [[files]]
-file = ".github/workflows/publish.yml"
-hash = "ebd4190646b086a1c6e50109a0c783a6a0a84afcc15cd672cca38fa442118add"
-
-[[files]]
 file = "ESM/soundsMuffled.dat"
 hash = "b6204127646d436cb8fbe9a9e2b3d1f92e0931e22f19b5754a8bd79d0f99835f"
 
 [[files]]
 file = "config/DistantHorizons.toml"
-hash = "863728cf2644dbe60e4d1d6118dbc9b492c3e509a54c476c1df4878ffa1982bc"
+hash = "26145b86f82001854b9a44ef9238a80546994e5a2ef0fc0d46984baedab6e43d"
 
 [[files]]
 file = "config/betterf3.json"
@@ -22,7 +18,7 @@ hash = "ddc1f3ea03ffc60b78810b4d29892c5c904f00b3ed877e75cdd72e2a5e8009bd"
 
 [[files]]
 file = "config/cclive-utilities.json"
-hash = "9390c642a400ee5f906d25a5f7fb81c1b066b6e079d6ffff230206ebe3916d1c"
+hash = "36a70a13121224d3e43780611227caaebf3bc426f09b30b3b8164721709b0fd1"
 
 [[files]]
 file = "config/chatnotify.json"
@@ -35,6 +31,10 @@ hash = "55e93fcb21c3dadd6d6d3e0b28fe3475196da9498cedd6fbac3d79e75633c946"
 [[files]]
 file = "config/commandkeys.json"
 hash = "56101f1d7a746c82e1ef8d534310c2cece290a8dde18d3de19f341b3b82b64c0"
+
+[[files]]
+file = "config/euphoria_patcher.properties"
+hash = "ed06c0aca09f4d1fe8b156a3dd7cc42d41c3412707e35655b5fe50b73d2fd1dd"
 
 [[files]]
 file = "config/extremesoundmuffler.json5"
@@ -107,7 +107,7 @@ metafile = true
 
 [[files]]
 file = "mods/chatnotify.pw.toml"
-hash = "0706fb12d1c5c4591705aded3a839d4e44fe2eebcd98693ac0c1ccc96e237432"
+hash = "e1a35619ddbe24dd296344e1c57c9797e8f44bdb93261938dc51800b73399edf"
 metafile = true
 
 [[files]]
@@ -126,23 +126,23 @@ hash = "2f2b854407ca786629b04fd2c96e9083f92b0e4f6eba7b4232a902b21fe9a135"
 metafile = true
 
 [[files]]
-file = "mods/controlling.pw.toml"
-hash = "d264afb5412f6f8e12d7ce75b4bfc8c752a5c41e520059593d583ce2e3490077"
-metafile = true
-
-[[files]]
 file = "mods/cubes-without-borders.pw.toml"
 hash = "a90139b002d632ba9256cb3e7e877945bf8e3afa5b191d1adc83c5e3eb72da4c"
 metafile = true
 
 [[files]]
 file = "mods/distanthorizons.pw.toml"
-hash = "547fcb6481c2cf682b9de98f0a719d27f0ba896d7b06076f2135f2abd470aea6"
+hash = "a071f64a28803c0aeebb2c81a497a4277f591e223b7ec6e5eca05dc916bd5e5e"
 metafile = true
 
 [[files]]
 file = "mods/entityculling.pw.toml"
 hash = "77a4661471dbfc2088b017170a68fa0d60e3b7ef8b773d097fbee58e2cda5f3d"
+metafile = true
+
+[[files]]
+file = "mods/euphoria-patches.pw.toml"
+hash = "76ba469ba67cdf17276da7a629ff85518f4c1dfaaae5ad28d9ee2d6bc79439c5"
 metafile = true
 
 [[files]]
@@ -288,9 +288,8 @@ file = "servers.dat"
 hash = "baf0505efa59475374511f856f2ccf7d6c994e338ab94e77f9b422d8fc30f788"
 
 [[files]]
-file = "shaderpacks/complementary-reimagined.pw.toml"
-hash = "531a8d239c952428d9a633ff99cb03461656ada28decbe2e1ef19f60f7fd5726"
-metafile = true
+file = "shaderpacks/ComplementaryReimagined_r5.6.1 + EuphoriaPatches_1.7.8.txt"
+hash = "4e8210035744d46895a56a74456dab024282b57a04f5b003bfa8458900d5d88f"
 
 [[files]]
 file = "shaderpacks/photon-shader.pw.toml"
