@@ -1,13 +1,13 @@
 name = "CCLive-Utilities"
-filename = "cclive-utilities-1.4.5.jar"
+filename = "cclive-utilities-1.6.0.jar"
 side = "client"
 
 [download]
-url = "https://cdn.modrinth.com/data/nBXDNiuw/versions/rHbiyoHp/cclive-utilities-1.4.5.jar"
+url = "https://cdn.modrinth.com/data/nBXDNiuw/versions/6pbDaYEk/cclive-utilities-1.6.0.jar"
 hash-format = "sha512"
-hash = "c1e22db75bc66a37d3e1ed9c8299b3617df0c8361e914ade9bfedab7b10c69ef92cf5e68c304ed7c1d534edd707c44f76825dd67d8ccf945d936b74f598f963e"
+hash = "163c854c9595dcadf102698f496c09906beb7f204bec45342f4c16f677f1a4e3a380c8ed81fa614d4ab43311b9c49b304db807902f333086485c241db5788801"
 
 [update]
 [update.modrinth]
 mod-id = "nBXDNiuw"
-version = "rHbiyoHp"
+version = "6pbDaYEk"
