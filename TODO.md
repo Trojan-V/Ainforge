@@ -22,6 +22,12 @@
 - Go through all mods, resourcepacks and shaderpacks on Modrinth and see if there is anything of interest that might be useful in this modpack.
 
 
+## Modrinth Project Page
+
+- Add gallery image for Custom Scoreboard
+- Add gallery image for CCLive-Utilities features
+
+
 ## Code-specific
 
 - The resource pack that supplies the button textures used on PlayLegend should be released on Modrinth, so it doesn't has to be included as an archive directly in the project.
