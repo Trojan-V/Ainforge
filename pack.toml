@@ -1,13 +1,13 @@
 name = "Ainforge"
 author = "Trojan-V"
-version = "1.1.0"
+version = "2.0.0-alpha2"
 description = "Ainforge provides pre-configured mods, aiming to provide a seemless experience while playing Cactus Clicker on the PlayLegend server network."
 pack-format = "packwiz:1.1.0"
 
 [index]
 file = "index.toml"
 hash-format = "sha256"
-hash = "c0d00b2f648759316cbbe9f62ac38c27f3e69b0f149a8b5e43ac8b22f2abf419"
+hash = "52d72eb70daa66ebf2d82260b17d567f08930581ce71499b3b1c4fed5252ead9"
 
 [versions]
 fabric = "0.18.2"

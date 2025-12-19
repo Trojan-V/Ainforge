@@ -2,12 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
-## [1.1.0] - 2025-12-12
+## [2.0.0] - 2025-12-19
 
 ### Added
 - Added [Amecs](https://modrinth.com/mod/amecs)
-- Added [ArmorHud](https://modrinth.com/mod/armor-hud/gallery
-)
+- Added [ArmorHud](https://modrinth.com/mod/armor-hud/gallery)
 - Added [Cubes Without Borders](https://modrinth.com/mod/cubes-without-borders)
 - Added [Model Gap Fix](https://modrinth.com/mod/modelfix)
 - Added [Xaero's Minimap](https://modrinth.com/mod/xaeros-minimap)
