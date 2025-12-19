@@ -1,0 +1,4 @@
+key_modifiers_key.fabrishot.screenshot:0,1,1
+key_modifiers_gui.xaero_toggle_map:0,1,0
+key_modifiers_gui.xaero_toggle_waypoints:0,1,0
+key_modifiers_gui.xaero_toggle_map_waypoints:1,0,0
