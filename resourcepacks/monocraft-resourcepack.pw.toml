@@ -1,0 +1,13 @@
+name = "Monocraft"
+filename = "Monocraft-1.0.0.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/68Gsazhh/versions/A8rN7yMt/Monocraft-1.0.0.zip"
+hash-format = "sha512"
+hash = "dde0014716849050ee255f338e6f378d58021ef30c7792f364b9c77553989004d8c83b3ea849ac5cad045c79b73c35fd2a35b9d73a1a86be6bfc1633947741ba"
+
+[update]
+[update.modrinth]
+mod-id = "68Gsazhh"
+version = "A8rN7yMt"
