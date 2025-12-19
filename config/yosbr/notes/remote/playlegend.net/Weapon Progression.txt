@@ -1,0 +1,21 @@
+§4§Waffenfortschritt
+§8—------------------------------------
+§7[ ] §5Drachenzahn             §8| §f§lE1
+§7[ ] §5Witwengruß              §8| §7§lE4
+§7[ ] §5Mondklinge              §8| §f§lE7
+§7[ ] §5Flammenfuror            §8| §7§lE10
+§7[ ] §6Blitzzorn               §8| §f§lE16
+§7[ ] §6Drachenzorn             §8| §7§lE21
+§7[ ] §6Phantomfluch            §8| §f§lE25
+§7[ ] §6Meisterschwert          §8| §7§lE30
+§7[ ] §6Anduril                 §8| §f§lE33
+§7[ ] §6Der Zeitverzerrer       §8| §7§lE36
+§7[ ] §6Klinge des Lehrmeisters §8| §f§lE45
+§7[ ] §5Inferno Klinge          §8| §7§lE48
+§7[ ] §5Alptraumhafter Schwur   §8| §f§lE55
+§7[ ] §5Leichenmacher           §8| §7§lE61
+§7[ ] §6Der Zephyrzerfetzer     §8| §f§lE65
+§7[ ] §6Die Morgenröte          §8| §7§lE71
+§7[ ] §5Donnerzorn              §8| §f§lE81
+§7[ ] §5Schneewind              §8| §7§lE99
+§8—------------------------------------
