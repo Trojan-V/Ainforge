@@ -1,0 +1,12 @@
+§4§lDamage Kit 3              §f§lE37-E51
+§8—--------------------------------------
+§7[ ] §6Titanentretter               §8| §f§lE37
+§7[ ] §6Blitzsturm Schulterbuckel    §8| §7§lE38
+§7[ ] §6Wurzelring des Lebens        §8| §7§lE38
+§7[ ] §6Blitzsturm Helmdeckung       §8| §f§lE39
+§7[ ] §6Amulett des Ewigenfeuers     §8| §7§lE40
+§7[ ] §6Blitzsturm Gurt              §8| §f§lE41
+§7[ ] §6Blitzsturm Brustpanzer       §8| §7§lE43
+§7[ ] §6Blitzsturm Panzerhandbuckel  §8| §7§lE43
+§7[ ] §6Blitzsturm Gamaschen         §8| §f§lE44
+§8—--------------------------------------

@@ -1,0 +1,12 @@
+§1§lTank Kit 1                §f§lE1-E18
+§8—-------------------------------------
+§7[ ] §5Enderstahl Waffengurt       §8| §f§lE1
+§7[ ] §5Enderstahl Plattenpanzer    §8| §7§lE6
+§7[ ] §5Kosmisches Siegel           §8| §7§lE6
+§7[ ] §5Enderstahl Kriegshandschuhe §8| §f§lE7
+§7[ ] §5Enderstahl Beinschützer     §8| §7§lE8
+§7[ ] §5Enderstahl Schulterplatten  §8| §7§lE8
+§7[ ] §5Kosmisches Medaillon        §8| §f§lE9
+§7[ ] §5Enderstahlstiefel           §8| §7§lE10
+§7[ ] §5Enderstahl Schutzhelm       §8| §7§lE10
+§8—-------------------------------------

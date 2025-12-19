@@ -1,0 +1,12 @@
+§6§lMünz Kit 4                 §f§lE40-E57
+§8—---------------------------------------
+§7[ ] §6Kristalline Schulterpanzer    §8| §f§lE40
+§7[ ] §6Sculkwanderer Plattenschuhe   §8| §7§lE41
+§7[ ] §6Ring der Unsterblichkeit      §8| §f§lE43
+§7[ ] §6Kristallkürass                §8| §7§lE45
+§7[ ] §6Kristalliner Helmpanzer       §8| §f§lE46
+§7[ ] §6Kristalline Plattenhandschuhe §8| §7§lE47
+§7[ ] §6Amulett der Unsterblichkeit   §8| §7§lE47
+§7[ ] §6Kristalline Plattenhose       §8| §f§lE48
+§7[ ] §6Kristallenes Schutzband       §8| §f§lE48
+§8—---------------------------------------

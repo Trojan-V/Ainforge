@@ -1,0 +1,12 @@
+§4§lDamage Kit 2            §f§lE27-E36
+§8—------------------------------------
+§7[ ] §5Giftiger Stachelhelm       §8| §f§lE27
+§7[ ] §5Magisches Platinband       §8| §f§lE27
+§7[ ] §5Giftige Stachelschuhe      §8| §7§lE29
+§7[ ] §5Giftiger Stachelpanzer     §8| §7§lE29
+§7[ ] §5Magisches Platinamulett    §8| §7§lE29
+§7[ ] §5Giftiger Gürtel            §8| §f§lE30
+§7[ ] §5Giftige Stachelhandschuhe  §8| §f§lE30
+§7[ ] §5Giftige Leggings           §8| §7§lE31
+§7[ ] §5Giftiger Schulterschutz    §8| §7§lE31
+§8—------------------------------------

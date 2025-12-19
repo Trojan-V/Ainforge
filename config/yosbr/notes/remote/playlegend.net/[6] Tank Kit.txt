@@ -1,0 +1,12 @@
+§2§lTank Kit 6                  §f§lE74-E87
+§8—----------------------------------------
+§7[ ] §5Halsband der Dämmerung         §8| §f§lE74
+§7[ ] §5Stahltretter der Tapferkeit    §8| §7§lE75
+§7[ ] §5Band der Wallwacht             §8| §f§lE76
+§7[ ] §5Titanstahl Gürtelschutz        §8| §7§lE78
+§7[ ] §5Titanstahl Brustpanzer         §8| §f§lE79
+§7[ ] §5Titanstahl Helmschale          §8| §7§lE80
+§7[ ] §5Titanstahl Handrüstung         §8| §7§lE80
+§7[ ] §5Titanstahl Schulterrüstung     §8| §7§lE80
+§7[ ] §5Titanstahl Plattenbeinschützer §8| §f§lE82
+§8—----------------------------------------

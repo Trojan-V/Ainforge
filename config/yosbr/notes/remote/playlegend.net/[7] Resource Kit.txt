@@ -1,0 +1,12 @@
+§2§lRessourcen Kit 7          §f§lE90-E100
+§8—---------------------------------------
+§7[ ] §6Sternenlicht Helmschale      §8| §f§lE90
+§7[ ] §6Götterschmiede               §8| §7§lE94
+§7[ ] §6Sternenlicht Handrüstung     §8| §f§lE96
+§7[ ] §6GODLY_AMULET                 §8| §f§lE96
+§7[ ] §6Lichtschildstampfer          §8| §7§lE97
+§7[ ] §6Sternenlicht Brustplatte     §8| §f§lE98
+§7[ ] §6Sternenlicht Gürtel          §8| §f§lE98
+§7[ ] §6Sternenlicht Beinkleider     §8| §7§lE99
+§7[ ] §6Sternenlicht Schulterrüstung §8| §f§lE100
+§8—---------------------------------------

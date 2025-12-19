@@ -1,0 +1,12 @@
+§4§lDamage Kit 5              §f§lE67-E77
+§8—--------------------------------------
+§7[ ] §6Sternenfeuer Plattengurt     §8| §f§lE67
+§7[ ] §6Engelsring                   §8| §f§lE67
+§7[ ] §6Sternenfeuer Kopfschutz      §8| §7§lE68
+§7[ ] §6Sternenfeuer Schulterschutz  §8| §f§lE69
+§7[ ] §6Sternenfeuer Leggings        §8| §7§lE71
+§7[ ] §6Sternenfeuer Fingerlinge     §8| §7§lE71
+§7[ ] §6Sternenfeuer Plattenstiefel  §8| §f§lE72
+§7[ ] §6Sternenfeuer Brustschutz     §8| §f§lE72
+§7[ ] §6Himmlisches Medaillon        §8| §f§lE72
+§8—--------------------------------------

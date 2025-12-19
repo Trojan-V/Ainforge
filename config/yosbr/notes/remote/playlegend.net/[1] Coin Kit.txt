@@ -1,0 +1,12 @@
+§6§lMünz Kit 1               §f§lE1-E13
+§8—------------------------------------
+§7[ ] §5Eisengestärkter Fußharnisch §8| §f§lE1
+§7[ ] §5Rubinrote Kriegshose        §8| §f§lE1
+§7[ ] §5Ewiges Lichtband            §8| §f§lE1
+§7[ ] §5Rubinrote Kriegsschultern   §8| §7§lE2
+§7[ ] §5Ewiges Lichtamulett         §8| §7§lE2
+§7[ ] §5Rubinrote Kriegshandschuhe  §8| §f§lE3
+§7[ ] §5Rubinroter Kriegshelm       §8| §7§lE4
+§7[ ] §5Rubinroter Kriegsharnisch   §8| §f§lE5
+§7[ ] §5Rubinroter Kriegsgürtel     §8| §7§lE6
+§8—------------------------------------

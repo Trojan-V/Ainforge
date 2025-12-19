@@ -1,0 +1,12 @@
+§6§lMünz Kit 2                §f§lE14-E25
+§8—--------------------------------------
+§7[ ] §5Diamantgewebter Helmpanzer   §8| §f§lE14
+§7[ ] §5Plattenschuhe des Legionärs  §8| §7§lE15
+§7[ ] §5Diamantgewebte Schulterhaube §8| §7§lE15
+§7[ ] §5Diamantgewebte Brustplatte   §8| §f§lE16
+§7[ ] §5Diamantgewebte Handhaube     §8| §f§lE16
+§7[ ] §5Eiskaltes Band               §8| §f§lE16
+§7[ ] §5Diamantgewebte Beinkleider   §8| §7§lE17
+§7[ ] §5Herz des Winters             §8| §7§lE17
+§7[ ] §5Diamantgewebter Gürtelschutz §8| §f§lE18
+§8—--------------------------------------

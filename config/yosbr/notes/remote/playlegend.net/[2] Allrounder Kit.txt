@@ -1,0 +1,12 @@
+§3§lAllrounder Kit 2             §f§lE42-E53
+§8—------------------------------------------
+§7[ ] §5Seelengebundener Helm            §8| §f§lE42
+§7[ ] §5Seelengebundener Waffengurt      §8| §f§lE42
+§7[ ] §5Seelengebundene Plattenschuhe    §8| §7§lE43
+§7[ ] §5Seelengebundene Plattenhose      §8| §7§lE43
+§7[ ] §5Seelengebundener Plattenpanzer   §8| §f§lE45
+§7[ ] §5Seelengebundene Fäustlinge       §8| §f§lE45
+§7[ ] §5Seelengebundene Plattenschultern §8| §f§lE45
+§7[ ] §5Amulett der Unendlichkeit        §8| §f§lE45
+§7[ ] §5Ring der Unendlichkeit           §8| §7§lE46
+§8—------------------------------------------

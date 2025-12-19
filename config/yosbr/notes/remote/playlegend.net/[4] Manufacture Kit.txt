@@ -1,0 +1,12 @@
+§e§lHerstellungs Kit 4        §f§lE48-E63
+§8—--------------------------------------
+§7[ ] §5Sternenstahl Helmschale      §8| §f§lE48
+§7[ ] §5Sternenstahl Gürtelschutz    §8| §7§lE49
+§7[ ] §5Band der Sterne              §8| §7§lE49
+§7[ ] §5Sternenstahl Handrüstung     §8| §f§lE50
+§7[ ] §5Halsband der Sterne          §8| §f§lE50
+§7[ ] §5Sternenstahl Schulterrüstung §8| §7§lE51
+§7[ ] §5Stählernde Stiefel des Mutes §8| §f§lE52
+§7[ ] §5Sternenstahl Leggings        §8| §f§lE52
+§7[ ] §5Sternenstahl Brustpanzer     §8| §f§lE52
+§8—--------------------------------------

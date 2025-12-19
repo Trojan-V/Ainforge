@@ -1,0 +1,12 @@
+§3§lAllrounder Kit 3        §f§lE54-E72
+§8—------------------------------------
+§7[ ] §6Titanenring                §8| §f§lE54
+§7[ ] §6Titanenhalsband            §8| §f§lE54
+§7[ ] §6Titanstahl Helmdeckung     §8| §7§lE55
+§7[ ] §6Mithril Brustplatte        §8| §f§lE56
+§7[ ] §6Titanstahl Gurt            §8| §f§lE56
+§7[ ] §6Titanstahl Schulterumhänge §8| §7§lE57
+§7[ ] §6Titanstahl Gamaschen       §8| §f§lE58
+§7[ ] §6Mithril Handpanzer         §8| §f§lE58
+§7[ ] §6Todesläufer                §8| §7§lE60
+§8—------------------------------------

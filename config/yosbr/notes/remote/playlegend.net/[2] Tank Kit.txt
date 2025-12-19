@@ -1,0 +1,12 @@
+§2§lTank Kit 2                  §f§lE19-E31
+§8—----------------------------------------
+§7[ ] §6Glutgewobener Plattenhelm      §8| §f§lE19
+§7[ ] §6Drachentöter Plattenhandpanzer §8| §7§lE20
+§7[ ] §6Glutgewebtes Beinkleid         §8| §f§lE21
+§7[ ] §6Glutgewebtes Schulterpolster   §8| §7§lE22
+§7[ ] §6Siegelring des Drachentöters   §8| §f§lE23
+§7[ ] §6Talisman des Drachentöters     §8| §f§lE23
+§7[ ] §6Glutgewobener Gürtel           §8| §7§lE24
+§7[ ] §6Gultgewebte Tretter            §8| §f§lE25
+§7[ ] §6Drachenherz Brustpanzer        §8| §f§lE25
+§8—----------------------------------------

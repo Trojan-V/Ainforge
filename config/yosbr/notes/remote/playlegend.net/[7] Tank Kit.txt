@@ -1,0 +1,12 @@
+§2§lTank Kit 7               §f§lE88-E100
+§8—--------------------------------------
+§7[ ] §6Ragnaröks Schulterbuckel     §8| §f§lE88
+§7[ ] §6Ragnaröks Brustpanzerung     §8| §7§lE91
+§7[ ] §6Halsband des Meisterschützen §8| §7§lE91
+§7[ ] §6Donnerknalltretter           §8| §f§lE93
+§7[ ] §6Ragnaröks Panzerhandbuckel   §8| §f§lE93
+§7[ ] §6Ragnaröks Helmdeckung        §8| §7§lE95
+§7[ ] §6Ragnaröks Gurt               §8| §f§lE96
+§7[ ] §6Ragnaröks Beinkleider        §8| §7§lE97
+§7[ ] §6Ring des Meisterschützen     §8| §7§lE97
+§8—--------------------------------------

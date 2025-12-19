@@ -1,0 +1,12 @@
+§4§lDamage Kit 6            §f§lE78-E94
+§8—------------------------------------
+§7[ ] §5Blutstein Handschützer     §8| §f§lE78
+§7[ ] §5Blutstein Panzergurt       §8| §7§lE81
+§7[ ] §5Hand des Todes             §8| §7§lE81
+§7[ ] §5Blutstein Panzerstiefel    §8| §f§lE83
+§7[ ] §5Blutstein Schulterplatten  §8| §f§lE83
+§7[ ] §5Blutstein Stirnschield     §8| §7§lE84
+§7[ ] §5Blutstein gamaschen        §8| §f§lE85
+§7[ ] §5Blutstein Brustpanzer      §8| §f§lE85
+§7[ ] §5Anhänger des Todesblick    §8| §f§lE85
+§8—------------------------------------

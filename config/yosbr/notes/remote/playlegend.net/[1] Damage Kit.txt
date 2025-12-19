@@ -1,0 +1,12 @@
+§4§lDamage Kit 1            §f§lE1-E26
+§8—-----------------------------------
+§7[ ] §6Fäustlinge der Ahnen      §8| §f§lE5 
+§7[ ] §6Sabatons der Ahnen        §8| §7§lE8 
+§7[ ] §6Gürtel der Ahnen          §8| §f§lE10
+§7[ ] §6Beinkleid der Ahnen       §8| §7§lE11
+§7[ ] §6Ring der Ahnen            §8| §f§lE12
+§7[ ] §6Schulterpanzer der Ahnen  §8| §7§lE13
+§7[ ] §6Kriegspanzer der Ahnen    §8| §f§lE14
+§7[ ] §6Plattenhelm der Ahnen     §8| §f§lE14
+§7[ ] §6Amulett der Ahnen         §8| §7§lE15
+§8—-----------------------------------

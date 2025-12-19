@@ -1,0 +1,12 @@
+§e§lHerstellungs Kit 7       §f§lE87-E100
+§8—--------------------------------------
+§7[ ] §5Himmelsstahl Fußschützer     §8| §f§lE87
+§7[ ] §5Ring der scharfen Klinge     §8| §7§lE88
+§7[ ] §5Himmelstahl Brustpanzer      §8| §f§lE89
+§7[ ] §5Himmelsstahl Fingerschützer  §8| §f§lE89
+§7[ ] §5Himmelsstahl Schulterplatten §8| §7§lE90
+§7[ ] §5Himmelsstahl Wappengurt      §8| §f§lE92
+§7[ ] §5Himmelsstahl Beinschienen    §8| §7§lE94
+§7[ ] §5Himmelsstahl Plattenhelm     §8| §7§lE94
+§7[ ] §5Anhänger der Klinge          §8| §f§lE95
+§8—--------------------------------------

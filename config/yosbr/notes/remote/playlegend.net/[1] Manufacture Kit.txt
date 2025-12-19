@@ -1,0 +1,12 @@
+§e§lHerstellungs Kit 1            §f§lE1-E17
+§8—------------------------------------------
+§7[ ] §6Drachenschuppen Kriegshelm        §8| §f§lE1
+§7[ ] §6Drachenschuppen Kriegsgürtel      §8| §f§lE1
+§7[ ] §6Göttliche Plattenläufer           §8| §7§lE2
+§7[ ] §6Drachenschuppen Kriegshandschuhe  §8| §f§lE3
+§7[ ] §6Drachenschuppen Kriegsbrustplatte §8| §7§lE4
+§7[ ] §6Drachenschuppen Kriegsschultern   §8| §7§lE4
+§7[ ] §6Drachenschuppen Kriegshosen       §8| §f§lE5
+§7[ ] §6Drachenblutband                   §8| §f§lE5
+§7[ ] §6Drachenblutamulett                §8| §7§lE6
+§8—------------------------------------------

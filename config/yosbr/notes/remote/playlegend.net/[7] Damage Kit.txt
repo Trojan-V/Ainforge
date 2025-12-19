@@ -1,0 +1,12 @@
+§4§lDamage Kit 7             §f§lE95-E100
+§8—--------------------------------------
+§7[ ] §6Dunkelsonnen Panzerstiefel  §8| §f§lE75 
+§7[ ] §6Phönixring                  §8| §7§lE95 
+§7[ ] §6Phönixhaupt                 §8| §f§lE97 
+§7[ ] §6Phönixfeder Hüftband        §8| §7§lE98 
+§7[ ] §6PhönixFeder Beinkleid       §8| §f§lE99 
+§7[ ] §6Phönixfeuer Handschützer    §8| §f§lE99 
+§7[ ] §6Sonneneruption              §8| §7§lE100
+§7[ ] §6Phönixfeder Schulterumhang  §8| §7§lE100
+§7[ ] §6Phönixanhänger              §8| §7§lE100
+§8—--------------------------------------

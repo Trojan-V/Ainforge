@@ -1,0 +1,12 @@
+§4§lDamage Kit 4               §f§lE52-E66
+§8—---------------------------------------
+§7[ ] §5Donnerfaust Panzerhandbuckel  §8| §f§lE52
+§7[ ] §5Donnerfaust Gurt              §8| §7§lE54
+§7[ ] §5Donnerfaust Brustpanzerung    §8| §f§lE55
+§7[ ] §5Donnerfaust Schulterbuckel    §8| §f§lE55
+§7[ ] §5Donnerfaust Helmdeckung       §8| §7§lE57
+§7[ ] §5Steinwurzstampfer             §8| §f§lE58
+§7[ ] §5Donnerfaust Plattenhose       §8| §f§lE58
+§7[ ] §5Geistertränenband             §8| §f§lE58
+§7[ ] §5Amulett der Geisterträne      §8| §f§lE58
+§8—---------------------------------------

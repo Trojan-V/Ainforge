@@ -1,0 +1,12 @@
+§2§lRessourcen Kit 6        §f§lE82-E89
+§8—------------------------------------
+§7[ ] §6Nebelwacht Plattenpanzer   §8| §f§lE82
+§7[ ] §6Kometenband                §8| §f§lE82
+§7[ ] §6NebelSchreiter             §8| §7§lE83
+§7[ ] §6Nebelwächter Gamaschen     §8| §7§lE83
+§7[ ] §6Nebelwächter Stulpen       §8| §7§lE83
+§7[ ] §6Nebelwächter Schulterhaube §8| §f§lE84
+§7[ ] §6Kosmischer Anhänger        §8| §f§lE84
+§7[ ] §6Nebelwächter Helm          §8| §7§lE85
+§7[ ] §6Nebelwacht Schutzband      §8| §7§lE85
+§8—------------------------------------
