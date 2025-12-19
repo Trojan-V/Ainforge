@@ -2,30 +2,31 @@ name: Modrinth release -> Discord (embed)
 
 on:
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "*/15 * * * *"
   workflow_dispatch:
 
 jobs:
   notify:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      # required to PATCH the repo Actions variable via REST API
+      actions: write 
+      contents: read
 
     steps:
-      - name: Checkout (store last seen version id)
-        uses: actions/checkout@v4
-
       - name: Install jq
         run: sudo apt-get update && sudo apt-get install -y jq
 
       - name: Fetch latest Modrinth version (ainforge)
         id: modrinth
         run: |
-          # Modrinth API: List project's versions (id|slug supported)
           json=$(curl -fsSL "https://api.modrinth.com/v2/project/ainforge/version") 
           id=$(echo "$json" | jq -r '.[0].id')
           name=$(echo "$json" | jq -r '.[0].name')
-          ver=$(echo "$json" | jq -r '.[0].version_number')
+
+          ver_raw=$(echo "$json" | jq -r '.[0].version_number')
+          ver=${ver_raw#v}   # remove optional leading "v" 
+
           date=$(echo "$json" | jq -r '.[0].date_published')
           downloads=$(echo "$json" | jq -r '.[0].downloads')
 
@@ -35,14 +36,13 @@ jobs:
           echo "date=$date" >> "$GITHUB_OUTPUT"
           echo "downloads=$downloads" >> "$GITHUB_OUTPUT"
 
-      - name: Compare with last notified version
+      - name: Compare with last notified version (repo variable)
         id: compare
+        env:
+          LAST: ${{ vars.MODRINTH_LAST_VERSION_ID }} 
+          CURR: ${{ steps.modrinth.outputs.id }}
         run: |
-          file=".github/modrinth_last_version.txt"
-          last=""
-          if [ -f "$file" ]; then last=$(cat "$file"); fi
-
-          if [ "${{ steps.modrinth.outputs.id }}" = "$last" ]; then
+          if [ "$CURR" = "$LAST" ]; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             echo "changed=true" >> "$GITHUB_OUTPUT"
@@ -89,17 +89,20 @@ jobs:
 
           curl -fsSL -H "Content-Type: application/json" -d "$payload" "$WEBHOOK" 
 
-      - name: Update cache file
+      - name: Update repo variable MODRINTH_LAST_VERSION_ID
         if: steps.compare.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          OWNER: ${{ github.repository_owner }}
+          REPO: ${{ github.event.repository.name }}
+          VALUE: ${{ steps.modrinth.outputs.id }}
         run: |
-          mkdir -p .github
-          echo "${{ steps.modrinth.outputs.id }}" > .github/modrinth_last_version.txt
+          api="https://api.github.com/repos/$OWNER/$REPO/actions/variables/MODRINTH_LAST_VERSION_ID"
 
-      - name: Commit cache update
-        if: steps.compare.outputs.changed == 'true'
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add .github/modrinth_last_version.txt
-          git commit -m "chore: update last Modrinth version" || exit 0
-          git push
+          # PATCH Update a repository variable
+          curl -fsSL -X PATCH \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            -d "$(jq -n --arg value "$VALUE" '{value:$value}')" \
+            "$api" 
