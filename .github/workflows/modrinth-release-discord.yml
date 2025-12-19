@@ -9,8 +9,7 @@ jobs:
   notify:
     runs-on: ubuntu-latest
     permissions:
-      # required to PATCH the repo Actions variable via REST API
-      actions: write 
+      # not needed for PAT-based API calls, but harmless:
       contents: read
 
     steps:
@@ -20,12 +19,12 @@ jobs:
       - name: Fetch latest Modrinth version (ainforge)
         id: modrinth
         run: |
-          json=$(curl -fsSL "https://api.modrinth.com/v2/project/ainforge/version") 
+          json=$(curl -fsSL "https://api.modrinth.com/v2/project/ainforge/version")
           id=$(echo "$json" | jq -r '.[0].id')
           name=$(echo "$json" | jq -r '.[0].name')
 
           ver_raw=$(echo "$json" | jq -r '.[0].version_number')
-          ver=${ver_raw#v}   # remove optional leading "v" 
+          ver=${ver_raw#v}   # remove optional leading "v"
 
           date=$(echo "$json" | jq -r '.[0].date_published')
           downloads=$(echo "$json" | jq -r '.[0].downloads')
@@ -39,7 +38,7 @@ jobs:
       - name: Compare with last notified version (repo variable)
         id: compare
         env:
-          LAST: ${{ vars.MODRINTH_LAST_VERSION_ID }} 
+          LAST: ${{ vars.MODRINTH_LAST_VERSION_ID }}
           CURR: ${{ steps.modrinth.outputs.id }}
         run: |
           if [ "$CURR" = "$LAST" ]; then
@@ -85,24 +84,23 @@ jobs:
                   footer: { text: "Modrinth" }
                 }
               ]
-            }') 
+            }')
 
-          curl -fsSL -H "Content-Type: application/json" -d "$payload" "$WEBHOOK" 
+          curl -fsSL -H "Content-Type: application/json" -d "$payload" "$WEBHOOK"
 
-      - name: Update repo variable MODRINTH_LAST_VERSION_ID
+      - name: Update repo variable MODRINTH_LAST_VERSION_ID (via PAT)
         if: steps.compare.outputs.changed == 'true'
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_PAT: ${{ secrets.GH_PAT }}
           OWNER: ${{ github.repository_owner }}
           REPO: ${{ github.event.repository.name }}
           VALUE: ${{ steps.modrinth.outputs.id }}
         run: |
           api="https://api.github.com/repos/$OWNER/$REPO/actions/variables/MODRINTH_LAST_VERSION_ID"
 
-          # PATCH Update a repository variable
           curl -fsSL -X PATCH \
             -H "Accept: application/vnd.github+json" \
-            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "Authorization: Bearer $GH_PAT" \
             -H "X-GitHub-Api-Version: 2022-11-28" \
             -d "$(jq -n --arg value "$VALUE" '{value:$value}')" \
-            "$api" 
+            "$api"
