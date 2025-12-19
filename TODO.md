@@ -25,4 +25,3 @@
 ## Code-specific
 
 - The resource pack that supplies the button textures used on PlayLegend should be released on Modrinth, so it doesn't has to be included as an archive directly in the project.
-- Discord notification whenever a new release is available
