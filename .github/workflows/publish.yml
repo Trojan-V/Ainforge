@@ -3,7 +3,7 @@ name: Publish to Modrinth
 on:
   push:
     tags:
-      - 'v*'  # Trigger bei Version-Tags wie v1.0.0
+      - 'v*'
 
 jobs:
   build-and-publish:
@@ -11,6 +11,12 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Derive version (strip leading v)
+        shell: bash
+        run: |
+          VERSION="${GITHUB_REF_NAME#v}"
+          echo "VERSION=$VERSION" >> "$GITHUB_ENV"
 
       - name: Setup Go
         uses: actions/setup-go@v5
@@ -26,11 +32,11 @@ jobs:
       - name: Upload to Modrinth
         uses: Kir-Antipov/mc-publish@v3.3
         with:
-          modrinth-id: ${{ vars.MODRINTH_PROJECT_SLUG }}
+          modrinth-id: ${{ vars.MODRINTH_PROJECT_ID }}
           modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
           files: '*.mrpack'
-          name: 'Release ${{ github.ref_name }}'
-          version: ${{ github.ref_name }}
+          name: 'Ainforge-${{ env.VERSION }}'
+          version: ${{ env.VERSION }}
           version-type: release
           changelog-file: CHANGELOG.md
           loaders: |
