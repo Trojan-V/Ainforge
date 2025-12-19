@@ -23,12 +23,6 @@
 
 
 ## Code-specific
+
 - The resource pack that supplies the button textures used on PlayLegend should be released on Modrinth, so it doesn't has to be included as an archive directly in the project.
 - Discord notification whenever a new release is available
-
-## Vor dem offiziellen Modrinth-Release
-- CHANGELOG schreiben
-- README für dieses Projekt schreiben
-    - Dabei besonders beachten: Das Resource Pack inkludiert Ressourcen aus dem PlayLegend Server Resource Pack
-    - Keybindings dokumentieren
-- LICENSE für dieses Projekt inkludieren, dabei die Lizenz anderer Mods evtl. beachten

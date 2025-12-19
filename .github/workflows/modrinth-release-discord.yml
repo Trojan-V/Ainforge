@@ -1,0 +1,105 @@
+name: Modrinth release -> Discord (embed)
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout (store last seen version id)
+        uses: actions/checkout@v4
+
+      - name: Install jq
+        run: sudo apt-get update && sudo apt-get install -y jq
+
+      - name: Fetch latest Modrinth version (ainforge)
+        id: modrinth
+        run: |
+          # Modrinth API: List project's versions (id|slug supported)
+          json=$(curl -fsSL "https://api.modrinth.com/v2/project/ainforge/version") 
+          id=$(echo "$json" | jq -r '.[0].id')
+          name=$(echo "$json" | jq -r '.[0].name')
+          ver=$(echo "$json" | jq -r '.[0].version_number')
+          date=$(echo "$json" | jq -r '.[0].date_published')
+          downloads=$(echo "$json" | jq -r '.[0].downloads')
+
+          echo "id=$id" >> "$GITHUB_OUTPUT"
+          echo "name=$name" >> "$GITHUB_OUTPUT"
+          echo "ver=$ver" >> "$GITHUB_OUTPUT"
+          echo "date=$date" >> "$GITHUB_OUTPUT"
+          echo "downloads=$downloads" >> "$GITHUB_OUTPUT"
+
+      - name: Compare with last notified version
+        id: compare
+        run: |
+          file=".github/modrinth_last_version.txt"
+          last=""
+          if [ -f "$file" ]; then last=$(cat "$file"); fi
+
+          if [ "${{ steps.modrinth.outputs.id }}" = "$last" ]; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Send Discord embed (ping modpack-updates)
+        if: steps.compare.outputs.changed == 'true'
+        env:
+          WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          ROLE_ID: "1451591252607893614"
+          VERSION: ${{ steps.modrinth.outputs.ver }}
+          NAME: ${{ steps.modrinth.outputs.name }}
+          DATE: ${{ steps.modrinth.outputs.date }}
+          DOWNLOADS: ${{ steps.modrinth.outputs.downloads }}
+        run: |
+          payload=$(jq -n \
+            --arg role "<@&$ROLE_ID>" \
+            --arg roleId "$ROLE_ID" \
+            --arg title "New Ainforge release: $VERSION" \
+            --arg url "https://modrinth.com/modpack/ainforge" \
+            --arg desc "$NAME" \
+            --arg timestamp "$DATE" \
+            --arg v "$VERSION" \
+            --arg d "$DOWNLOADS" \
+            '{
+              content: $role,
+              allowed_mentions: { roles: [$roleId] },
+              username: "Ainforge Release Bot",
+              embeds: [
+                {
+                  title: $title,
+                  url: $url,
+                  description: $desc,
+                  color: 3447003,
+                  timestamp: $timestamp,
+                  fields: [
+                    { name: "Version", value: $v, inline: true },
+                    { name: "Downloads", value: $d, inline: true }
+                  ],
+                  footer: { text: "Modrinth" }
+                }
+              ]
+            }') 
+
+          curl -fsSL -H "Content-Type: application/json" -d "$payload" "$WEBHOOK" 
+
+      - name: Update cache file
+        if: steps.compare.outputs.changed == 'true'
+        run: |
+          mkdir -p .github
+          echo "${{ steps.modrinth.outputs.id }}" > .github/modrinth_last_version.txt
+
+      - name: Commit cache update
+        if: steps.compare.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .github/modrinth_last_version.txt
+          git commit -m "chore: update last Modrinth version" || exit 0
+          git push
