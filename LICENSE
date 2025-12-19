@@ -1,0 +1,49 @@
+Ainforge Source-Available License (Non-Commercial, No Reuploads) 
+Version 1.0 — 2025-12-19 
+
+Copyright (c) 2025 Trojan-V. All rights reserved. 
+
+Scope 
+This license applies to the contents of the Ainforge repository and/or modpack distribution only to the extent that those contents are authored by the licensor (“Licensor Materials”). 
+It does not grant any rights to third-party content that may be referenced, downloaded, or bundled by the modpack (including but not limited to Minecraft mods, libraries, shaders, textures, trademarks, or assets owned by others). 
+
+Definitions 
+
+“Licensor Materials” means files created by the project author(s), such as configuration files, metadata (e.g., pack definitions), scripts, documentation, and build/automation files. 
+
+“Third-Party Materials” means anything not authored by the licensor, including mods and assets subject to their own licenses or permissions. 
+
+Permissions (Source-Available) 
+Subject to the restrictions below, you are granted a worldwide, non-exclusive, revocable license to: 
+
+View and use the Licensor Materials for personal use. 
+
+Modify the Licensor Materials for personal use. 
+
+Share patches/diffs (e.g., git commits, PRs, or textual diffs) that modify the Licensor Materials, provided they do not include Third-Party Materials. 
+
+Restrictions (No reuploads) 
+You may not: 
+
+Use the Licensor Materials for commercial purposes, including selling, licensing, monetizing, or bundling them into a paid product or service. 
+
+Reupload, redistribute, mirror, or republish the modpack (in whole or in part) on any platform (including Modrinth, CurseForge, GitHub Releases, file hosts, launchers, or any other public distribution channel), whether modified or unmodified, without prior written permission from the copyright holder(s). 
+
+Redistribute any Third-Party Materials unless you comply with their respective licenses/permissions. 
+
+Claim authorship of the Licensor Materials or remove attribution notices. 
+
+Contributions 
+By submitting a contribution (e.g., pull request) to this project, you agree that your contribution may be incorporated into the Licensor Materials under the terms of this license. 
+
+No Warranty 
+THE LICENSOR MATERIALS ARE PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. 
+
+Limitation of Liability 
+IN NO EVENT SHALL THE COPYRIGHT HOLDER(S) BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE LICENSOR MATERIALS OR THE USE OR OTHER DEALINGS IN THE LICENSOR MATERIALS. 
+
+Termination 
+This license is automatically terminated if you violate its terms. Upon termination, you must cease use and distribution of the Licensor Materials and delete any copies you possess, except where retention is required by law. 
+
+Trademarks 
+This license does not grant permission to use any trademarks, including “Minecraft” or “PlayLegend”, except as required for truthful, descriptive references. 
