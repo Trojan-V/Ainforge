@@ -9,98 +9,163 @@ jobs:
   notify:
     runs-on: ubuntu-latest
     permissions:
-      # not needed for PAT-based API calls, but harmless:
       contents: read
 
     steps:
       - name: Install jq
         run: sudo apt-get update && sudo apt-get install -y jq
 
-      - name: Fetch latest Modrinth version (ainforge)
-        id: modrinth
-        run: |
-          json=$(curl -fsSL "https://api.modrinth.com/v2/project/ainforge/version")
-          id=$(echo "$json" | jq -r '.[0].id')
-          name=$(echo "$json" | jq -r '.[0].name')
-
-          ver_raw=$(echo "$json" | jq -r '.[0].version_number')
-          ver=${ver_raw#v}   # remove optional leading "v"
-
-          date=$(echo "$json" | jq -r '.[0].date_published')
-          downloads=$(echo "$json" | jq -r '.[0].downloads')
-
-          echo "id=$id" >> "$GITHUB_OUTPUT"
-          echo "name=$name" >> "$GITHUB_OUTPUT"
-          echo "ver=$ver" >> "$GITHUB_OUTPUT"
-          echo "date=$date" >> "$GITHUB_OUTPUT"
-          echo "downloads=$downloads" >> "$GITHUB_OUTPUT"
-
-      - name: Compare with last notified version (repo variable)
-        id: compare
-        env:
-          LAST: ${{ vars.MODRINTH_LAST_VERSION_ID }}
-          CURR: ${{ steps.modrinth.outputs.id }}
-        run: |
-          if [ "$CURR" = "$LAST" ]; then
-            echo "changed=false" >> "$GITHUB_OUTPUT"
-          else
-            echo "changed=true" >> "$GITHUB_OUTPUT"
-          fi
-
-      - name: Send Discord embed (ping modpack-updates)
-        if: steps.compare.outputs.changed == 'true'
+      - name: Sync Modrinth versions -> Discord (create/edit + GC)
         env:
           WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_URL }}
           ROLE_ID: "1451591252607893614"
-          VERSION: ${{ steps.modrinth.outputs.ver }}
-          NAME: ${{ steps.modrinth.outputs.name }}
-          DATE: ${{ steps.modrinth.outputs.date }}
-          DOWNLOADS: ${{ steps.modrinth.outputs.downloads }}
-        run: |
-          payload=$(jq -n \
-            --arg role "<@&$ROLE_ID>" \
-            --arg roleId "$ROLE_ID" \
-            --arg title "New Ainforge release: $VERSION" \
-            --arg url "https://modrinth.com/modpack/ainforge" \
-            --arg desc "$NAME" \
-            --arg timestamp "$DATE" \
-            --arg v "$VERSION" \
-            --arg d "$DOWNLOADS" \
-            '{
-              content: $role,
-              allowed_mentions: { roles: [$roleId] },
-              username: "Ainforge Release Bot",
-              embeds: [
-                {
-                  title: $title,
-                  url: $url,
-                  description: $desc,
-                  color: 3447003,
-                  timestamp: $timestamp,
-                  fields: [
-                    { name: "Version", value: $v, inline: true },
-                    { name: "Downloads", value: $d, inline: true }
-                  ],
-                  footer: { text: "Modrinth" }
-                }
-              ]
-            }')
 
-          curl -fsSL -H "Content-Type: application/json" -d "$payload" "$WEBHOOK"
+          MAP_JSON: ${{ vars.MODRINTH_VERSION_MESSAGES_JSON }}
 
-      - name: Update repo variable MODRINTH_LAST_VERSION_ID (via PAT)
-        if: steps.compare.outputs.changed == 'true'
-        env:
           GH_PAT: ${{ secrets.GH_PAT }}
           OWNER: ${{ github.repository_owner }}
           REPO: ${{ github.event.repository.name }}
-          VALUE: ${{ steps.modrinth.outputs.id }}
         run: |
-          api="https://api.github.com/repos/$OWNER/$REPO/actions/variables/MODRINTH_LAST_VERSION_ID"
+          set -euo pipefail
+
+          # 1) Load mapping from repo variable (or init to {})
+          map='{}'
+          if [ -n "${MAP_JSON:-}" ] && [ "${MAP_JSON:-}" != "null" ]; then
+            map="$MAP_JSON"
+          fi
+
+          # 2) Fetch versions from Modrinth (limit defines GC window)
+          versions=$(curl -fsSL "https://api.modrinth.com/v2/project/ainforge/version" | jq '.[0:25]')
+          # Extract allowed version IDs as array (whitelist for GC)
+          allowed_ids=$(echo "$versions" | jq '[.[].id]')
+
+          updated_map="$map"
+
+          build_payload () {
+            local version_id="$1"
+            local version_number="$2"
+            local version_name="$3"
+            local date_published="$4"
+            local downloads="$5"
+            local ping="$6" # "true" or "false"
+
+            if [ "$ping" = "true" ]; then
+              jq -n \
+                --arg role "<@&$ROLE_ID>" \
+                --arg roleId "$ROLE_ID" \
+                --arg title "New Ainforge release: $version_number" \
+                --arg url "https://modrinth.com/modpack/ainforge/version/$version_id" \
+                --arg desc "$version_name" \
+                --arg timestamp "$date_published" \
+                --arg v "$version_number" \
+                --arg d "$downloads" \
+                '{
+                  content: $role,
+                  allowed_mentions: { roles: [$roleId] },
+                  username: "Ainforge Release Bot",
+                  embeds: [
+                    {
+                      title: $title,
+                      url: $url,
+                      description: $desc,
+                      color: 3447003,
+                      timestamp: $timestamp,
+                      fields: [
+                        { name: "Version", value: $v, inline: true },
+                        { name: "Downloads", value: $d, inline: true }
+                      ],
+                      footer: { text: "Modrinth" }
+                    }
+                  ]
+                }'
+            else
+              jq -n \
+                --arg title "New Ainforge release: $version_number" \
+                --arg url "https://modrinth.com/modpack/ainforge/version/$version_id" \
+                --arg desc "$version_name" \
+                --arg timestamp "$date_published" \
+                --arg v "$version_number" \
+                --arg d "$downloads" \
+                '{
+                  username: "Ainforge Release Bot",
+                  embeds: [
+                    {
+                      title: $title,
+                      url: $url,
+                      description: $desc,
+                      color: 3447003,
+                      timestamp: $timestamp,
+                      fields: [
+                        { name: "Version", value: $v, inline: true },
+                        { name: "Downloads", value: $d, inline: true }
+                      ],
+                      footer: { text: "Modrinth" }
+                    }
+                  ]
+                }'
+            fi
+          }
+
+          # 3) Iterate each version in the GC window
+          echo "$versions" | jq -c '.[]' | while read -r v; do
+            version_id=$(echo "$v" | jq -r '.id')
+            version_name=$(echo "$v" | jq -r '.name')
+
+            ver_raw=$(echo "$v" | jq -r '.version_number')
+            version_number="${ver_raw#v}"
+
+            date_published=$(echo "$v" | jq -r '.date_published')
+            downloads=$(echo "$v" | jq -r '.downloads')
+
+            has_entry=$(echo "$updated_map" | jq -r --arg vid "$version_id" 'has($vid)')
+
+            if [ "$has_entry" != "true" ]; then
+              payload=$(build_payload "$version_id" "$version_number" "$version_name" "$date_published" "$downloads" "true")
+
+              # wait=true returns created message object including id. [Discord] [web:10]
+              resp=$(curl -fsSL -H "Content-Type: application/json" -d "$payload" "$WEBHOOK?wait=true")
+              message_id=$(echo "$resp" | jq -r '.id')
+
+              updated_map=$(echo "$updated_map" | jq \
+                --arg vid "$version_id" \
+                --arg mid "$message_id" \
+                --argjson dl "$downloads" \
+                '. + {($vid): {message_id: $mid, downloads: $dl}}')
+
+              continue
+            fi
+
+            old_downloads=$(echo "$updated_map" | jq -r --arg vid "$version_id" '.[$vid].downloads // -1')
+            message_id=$(echo "$updated_map" | jq -r --arg vid "$version_id" '.[$vid].message_id')
+
+            if [ "$downloads" != "$old_downloads" ]; then
+              payload=$(build_payload "$version_id" "$version_number" "$version_name" "$date_published" "$downloads" "false")
+
+              # Edit webhook message endpoint. [web:10]
+              curl -fsSL -X PATCH \
+                -H "Content-Type: application/json" \
+                -d "$payload" \
+                "$WEBHOOK/messages/$message_id"
+
+              updated_map=$(echo "$updated_map" | jq \
+                --arg vid "$version_id" \
+                --argjson dl "$downloads" \
+                '.[$vid].downloads = $dl')
+            fi
+          done
+
+          # 4) Garbage collection: keep only entries whose versionId is still in allowed_ids
+          updated_map=$(echo "$updated_map" | jq --argjson allowed "$allowed_ids" '
+            INDEX($allowed[]; .) as $keep
+            | with_entries(select($keep[.key]))
+          ')
+
+          # 5) Persist updated mapping back into repo variable
+          api="https://api.github.com/repos/$OWNER/$REPO/actions/variables/MODRINTH_VERSION_MESSAGES_JSON"
 
           curl -fsSL -X PATCH \
             -H "Accept: application/vnd.github+json" \
             -H "Authorization: Bearer $GH_PAT" \
             -H "X-GitHub-Api-Version: 2022-11-28" \
-            -d "$(jq -n --arg value "$VALUE" '{value:$value}')" \
+            -d "$(jq -n --arg value "$updated_map" '{value:$value}')" \
             "$api"
