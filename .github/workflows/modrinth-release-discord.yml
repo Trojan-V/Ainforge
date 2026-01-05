@@ -72,7 +72,8 @@ jobs:
                       timestamp: $timestamp,
                       fields: [
                         { name: "Version", value: $v, inline: true },
-                        { name: "Downloads", value: $d, inline: true }
+                        { name: "Downloads", value: $d, inline: true },
+                        { name: "Changelog", value: "[Open Changelog](https://modrinth.com/modpack/ainforge/changelog)", inline: false }
                       ],
                       footer: { text: "Modrinth" }
                     }
@@ -97,7 +98,8 @@ jobs:
                       timestamp: $timestamp,
                       fields: [
                         { name: "Version", value: $v, inline: true },
-                        { name: "Downloads", value: $d, inline: true }
+                        { name: "Downloads", value: $d, inline: true },
+                        { name: "Changelog", value: "[Open Changelog](https://modrinth.com/modpack/ainforge/changelog)", inline: false }
                       ],
                       footer: { text: "Modrinth" }
                     }
