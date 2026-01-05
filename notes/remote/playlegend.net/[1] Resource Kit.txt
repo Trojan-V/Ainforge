@@ -1,0 +1,12 @@
+§2§lRessourcen Kit 1             §f§lE1-E23
+§8—----------------------------------------
+§7[ ] §6Dunkelmond Gamaschen           §8| §f§lE6
+§7[ ] §6Dunkelmond Helmvisier          §8| §f§lE6
+§7[ ] §6Dunkelmond Panzerhandbuckel    §8| §7§lE7
+§7[ ] §6Band der dunklen Herrschaft    §8| §7§lE7
+§7[ ] §6Dunkelmond Schulterbuckel      §8| §f§lE8
+§7[ ] §6Angus Abzeichen der Dunkelheit §8| §f§lE8
+§7[ ] §6Sternenstahlstiefel            §8| §7§lE10
+§7[ ] §6Dunkelmond Brustpanzer         §8| §f§lE11
+§7[ ] §6Dunkelmond Gurt                §8| §7§lE12
+§8—----------------------------------------

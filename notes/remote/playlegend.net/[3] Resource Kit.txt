@@ -1,0 +1,12 @@
+§2§lRessourcen Kit 3         §f§lE35-E50
+§8—-------------------------------------
+§7[ ] §5Eichenherz Panzerhandschuhe §8| §f§lE35
+§7[ ] §5Eichenherz Plattengürtel    §8| §7§lE36
+§7[ ] §5Götteranhänger              §8| §f§lE37
+§7[ ] §5Eichenherz Plattenschuhe    §8| §7§lE39
+§7[ ] §5Eichenherz Plattenbrust     §8| §7§lE39
+§7[ ] §5Göttersegen                 §8| §7§lE39
+§7[ ] §5Eichenherz Schulterschützer §8| §f§lE40
+§7[ ] §5Eichenherz Plattenhose      §8| §7§lE41
+§7[ ] §5Eichenherz Schutzhelm       §8| §7§lE41
+§8—-------------------------------------

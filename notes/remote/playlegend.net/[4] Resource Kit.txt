@@ -1,0 +1,12 @@
+§2§lRessourcen Kit 4            §f§lE51-E66
+§8—----------------------------------------
+§7[ ] §5Mithril Sabatons               §8| §f§lE51
+§7[ ] §5Zwergenstahl Plattenpanzer     §8| §7§lE53
+§7[ ] §5Mithril Schulterhaube          §8| §7§lE53
+§7[ ] §5Mithril Band                   §8| §f§lE54
+§7[ ] §5Zwergenstahl Plattenhandschuhe §8| §f§lE54
+§7[ ] §5Mithril Kopfschutz             §8| §7§lE55
+§7[ ] §5Sternenfeuer-Anhänger          §8| §7§lE55
+§7[ ] §5Mithril Gamaschen              §8| §f§lE56
+§7[ ] §5Sternenfeuer-Ring              §8| §f§lE56
+§8—----------------------------------------

@@ -1,0 +1,12 @@
+§2§lRessourcen Kit 2          §f§lE24-E34
+§8—--------------------------------------
+§7[ ] §5Flammentretter               §8| §f§lE24
+§7[ ] §5Dämmerstahl Helmhaube        §8| §7§lE25
+§7[ ] §5Dämmerstahl Schulterplatten  §8| §7§lE25
+§7[ ] §5Dämmerstahl Beinkleider      §8| §f§lE26
+§7[ ] §5Dämmerstahl Brustpanzerung   §8| §f§lE26
+§7[ ] §5Dämmerstahl Gurtband         §8| §f§lE26
+§7[ ] §5Dämmerstahl Panzerhandschuhe §8| §7§lE28
+§7[ ] §5Raimondos Siegelring         §8| §7§lE28
+§7[ ] §5Raimondos Anhänger           §8| §7§lE28
+§8—--------------------------------------
