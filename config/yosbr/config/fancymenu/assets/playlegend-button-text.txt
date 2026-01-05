@@ -1,1 +1,0 @@
-§f§lPlay§4§lLegend §f→ {"placeholder":"serverstatus","values":{"ip":"playlegend.net"}} | {"placeholder":"serverplayercount","values":{"ip":"playlegend.net"}}

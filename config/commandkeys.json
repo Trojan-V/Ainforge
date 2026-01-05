@@ -1,0 +1,171 @@
+{
+  "version": 6,
+  "profiles": [
+    {
+      "version": 4,
+      "name": "PlayLegend Presets",
+      "links": [],
+      "addToHistory": "OFF",
+      "showHudMessage": "OFF",
+      "resumeRepeating": "OFF",
+      "useRatelimit": "ON",
+      "macros": [
+        {
+          "version": 6,
+          "addToHistory": false,
+          "showHudMessage": false,
+          "resumeRepeating": false,
+          "useRatelimit": true,
+          "conflictStrategy": "SUBMIT",
+          "sendMode": "SEND",
+          "activationType": "HOLD",
+          "spaceTicks": 0,
+          "maxRepeats": 0,
+          "keybind": {
+            "version": 0,
+            "keyName": "key.keyboard.x",
+            "limitKeyName": "key.keyboard.unknown"
+          },
+          "altKeybind": {
+            "version": 0,
+            "keyName": "key.keyboard.unknown",
+            "limitKeyName": "key.keyboard.unknown"
+          },
+          "messages": [
+            {
+              "version": 1,
+              "string": "/cc moblexicon",
+              "delayTicks": 0
+            }
+          ]
+        },
+        {
+          "version": 6,
+          "addToHistory": false,
+          "showHudMessage": false,
+          "resumeRepeating": false,
+          "useRatelimit": true,
+          "conflictStrategy": "SUBMIT",
+          "sendMode": "SEND",
+          "activationType": "HOLD",
+          "spaceTicks": 0,
+          "maxRepeats": 0,
+          "keybind": {
+            "version": 0,
+            "keyName": "key.keyboard.z",
+            "limitKeyName": "key.keyboard.unknown"
+          },
+          "altKeybind": {
+            "version": 0,
+            "keyName": "key.keyboard.unknown",
+            "limitKeyName": "key.keyboard.unknown"
+          },
+          "messages": [
+            {
+              "version": 1,
+              "string": "/cc attributes",
+              "delayTicks": 0
+            }
+          ]
+        },
+        {
+          "version": 6,
+          "addToHistory": false,
+          "showHudMessage": false,
+          "resumeRepeating": false,
+          "useRatelimit": true,
+          "conflictStrategy": "SUBMIT",
+          "sendMode": "SEND",
+          "activationType": "HOLD",
+          "spaceTicks": 0,
+          "maxRepeats": 0,
+          "keybind": {
+            "version": 0,
+            "keyName": "key.keyboard.b",
+            "limitKeyName": "key.keyboard.unknown"
+          },
+          "altKeybind": {
+            "version": 0,
+            "keyName": "key.keyboard.unknown",
+            "limitKeyName": "key.keyboard.unknown"
+          },
+          "messages": [
+            {
+              "version": 1,
+              "string": "/cc shards WEAPON",
+              "delayTicks": 0
+            }
+          ]
+        },
+        {
+          "version": 6,
+          "addToHistory": false,
+          "showHudMessage": false,
+          "resumeRepeating": false,
+          "useRatelimit": true,
+          "conflictStrategy": "SUBMIT",
+          "sendMode": "SEND",
+          "activationType": "HOLD",
+          "spaceTicks": 0,
+          "maxRepeats": 0,
+          "keybind": {
+            "version": 0,
+            "keyName": "key.keyboard.b",
+            "limitKeyName": "key.keyboard.left.control"
+          },
+          "altKeybind": {
+            "version": 0,
+            "keyName": "key.keyboard.unknown",
+            "limitKeyName": "key.keyboard.unknown"
+          },
+          "messages": [
+            {
+              "version": 1,
+              "string": "/cc shards TOOL",
+              "delayTicks": 0
+            }
+          ]
+        },
+        {
+          "version": 6,
+          "addToHistory": false,
+          "showHudMessage": false,
+          "resumeRepeating": false,
+          "useRatelimit": true,
+          "conflictStrategy": "SUBMIT",
+          "sendMode": "SEND",
+          "activationType": "HOLD",
+          "spaceTicks": 0,
+          "maxRepeats": 0,
+          "keybind": {
+            "version": 0,
+            "keyName": "key.keyboard.b",
+            "limitKeyName": "key.keyboard.left.shift"
+          },
+          "altKeybind": {
+            "version": 0,
+            "keyName": "key.keyboard.unknown",
+            "limitKeyName": "key.keyboard.unknown"
+          },
+          "messages": [
+            {
+              "version": 1,
+              "string": "/cc shards ARMOR",
+              "delayTicks": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "spDefault": 0,
+  "mpDefault": 0,
+  "defaultConflictStrategy": "SUBMIT",
+  "defaultSendMode": "SEND",
+  "defaultActivationType": "HOLD",
+  "ratelimitCount": 4,
+  "ratelimitTicks": 20,
+  "ratelimitStrict": false,
+  "ratelimitSp": false,
+  "lengthLimitLength": 256
+}

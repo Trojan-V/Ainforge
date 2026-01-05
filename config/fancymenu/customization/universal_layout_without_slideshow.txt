@@ -1,0 +1,36 @@
+type = fancymenu_layout
+
+layout-meta {
+  identifier = %fancymenu:universal_layout%
+  render_custom_elements_behind_vanilla = false
+  last_edited_time = 1767636155676
+  is_enabled = true
+  randommode = false
+  randomgroup = 1
+  randomonlyfirsttime = false
+  layout_index = 2
+  universal_layout_blacklist = pause_screen;skin_customization_screen;language_select_screen;pack_selection_screen;online_options_screen;sound_options_screen;controls_screen;mouse_settings_screen;net.minecraft.class_6599;chat_options_screen;accessibility_options_screen;options_screen;net.minecraft.class_8671;
+  [loading_requirement_container_meta:30527823-808e-4771-a590-f0d3e2517e70-1767636142100] = [groups:][instances:f0bb05f6-e19a-4bbd-bc2b-dffd42222046-1766006187326;]
+  [loading_requirement:fancymenu_loading_requirement_is_world_loaded][requirement_mode:if][req_id:f0bb05f6-e19a-4bbd-bc2b-dffd42222046-1766006187326] = 
+}
+
+customization {
+  action = backgroundoptions
+  keepaspectratio = true
+}
+
+scroll_list_customization {
+  preserve_scroll_list_header_footer_aspect_ratio = true
+  render_scroll_list_header_shadow = true
+  render_scroll_list_footer_shadow = true
+  show_scroll_list_header_footer_preview_in_editor = false
+  repeat_scroll_list_header_texture = false
+  repeat_scroll_list_footer_texture = false
+  show_screen_background_overlay_on_custom_background = false
+  apply_vanilla_background_blur = false
+}
+
+layout_action_executable_blocks {
+  open_screen_executable_block_identifier = 0a64fe55-e95c-487b-9885-0e8db908cc8c-1766005112778
+  [executable_block:0a64fe55-e95c-487b-9885-0e8db908cc8c-1766005112778][type:generic] = [executables:]
+}
