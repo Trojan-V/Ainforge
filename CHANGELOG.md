@@ -3,6 +3,7 @@
 All notable changes to this project will be documented in this file.
 
 ## [2.1.0] - 2026-05-01
+Important note: Please reinstall the modpack instead of just updating your Minecraft instance to the newest version. This is probably the last time a full reinstall has to be performed.
 
 ### Changed
 - Deactivated the coordinate display below the minimap, as coordinates are kinda irrelevant in Cactus Clicker
