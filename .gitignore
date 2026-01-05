@@ -1,4 +1,4 @@
 *.zip
 *.mrpack
 
-uncompressed-images/
+.dev/slideshow-images-compressed/

@@ -1,6 +1,14 @@
 hash-format = "sha256"
 
 [[files]]
+file = "CHANGELOG.md"
+hash = "dea40210665f2e0fde37b45a6489fc6295eb8e6442a531e517e65cb15bfe75b1"
+
+[[files]]
+file = "ESM/soundsMuffled.dat"
+hash = "b6204127646d436cb8fbe9a9e2b3d1f92e0931e22f19b5754a8bd79d0f99835f"
+
+[[files]]
 file = "LICENSE"
 hash = "da5c767b8885dc47b173f76772b4f6add8e68dec67228580442a1c2b4772b01b"
 
@@ -9,416 +17,248 @@ file = "README.md"
 hash = "594f56b906b9d79fe3c8bdcb2538a0a38b85569de5a2a7763956167023b8e3cc"
 
 [[files]]
-file = "config/yosbr/ESM/soundsMuffled.dat"
-hash = "b6204127646d436cb8fbe9a9e2b3d1f92e0931e22f19b5754a8bd79d0f99835f"
-
-[[files]]
-file = "config/yosbr/config/DistantHorizons.toml"
+file = "config/DistantHorizons.toml"
 hash = "26145b86f82001854b9a44ef9238a80546994e5a2ef0fc0d46984baedab6e43d"
 
 [[files]]
-file = "config/yosbr/config/betterf3.json"
+file = "config/betterf3.json"
 hash = "14bd54953ce2b25f425083ee944a882bdcb81f211ada4eb14c428c718a46bf4c"
 
 [[files]]
-file = "config/yosbr/config/bettergrass.json"
+file = "config/bettergrass.json"
 hash = "ddc1f3ea03ffc60b78810b4d29892c5c904f00b3ed877e75cdd72e2a5e8009bd"
 
 [[files]]
-file = "config/yosbr/config/cclive-utilities.json"
+file = "config/cclive-utilities.json"
 hash = "578eb70a2f3c8934c4317b6a028fc834e6068161d88f2841913f7ca9e7c12e0f"
 
 [[files]]
-file = "config/yosbr/config/chatnotify.json"
-hash = "42138336066396db47a3a70d8b4aa768dfecf1d125fa89e5033bb198316a383b"
+file = "config/chatnotify.json"
+hash = "ac1c9758d2828e92c91d36356e657b29683b6785cf1365a209ea88fd92255ba4"
 
 [[files]]
-file = "config/yosbr/config/chatpatches.json"
+file = "config/chatpatches.json"
 hash = "55e93fcb21c3dadd6d6d3e0b28fe3475196da9498cedd6fbac3d79e75633c946"
 
 [[files]]
-file = "config/yosbr/config/commandkeys.json"
+file = "config/commandkeys.json"
 hash = "56101f1d7a746c82e1ef8d534310c2cece290a8dde18d3de19f341b3b82b64c0"
 
 [[files]]
-file = "config/yosbr/config/euphoria_patcher.properties"
+file = "config/euphoria_patcher.properties"
 hash = "ed06c0aca09f4d1fe8b156a3dd7cc42d41c3412707e35655b5fe50b73d2fd1dd"
 
 [[files]]
-file = "config/yosbr/config/extremesoundmuffler.json5"
+file = "config/extremesoundmuffler.json5"
 hash = "69a30fba0bb7e37c3a786351261d4d862dda84376756efef07021300cd1beffc"
 
 [[files]]
-file = "config/yosbr/config/fabrishot.properties"
+file = "config/fabrishot.properties"
 hash = "c60c3fa78f46533cf90682cf81f5917d7d6915b66a0623e2862f2a9923fdd3ab"
 
 [[files]]
-file = "config/yosbr/config/fancymenu/assets/ainforge-logo-16x16.png"
+file = "config/fancymenu/assets/ainforge-logo-16x16.png"
 hash = "515069c1884f1f94b2d4e86fa724165de21ba5f9b06f9dcabb08bdfa361b128a"
 
 [[files]]
-file = "config/yosbr/config/fancymenu/assets/ainforge-logo-32x32.icns"
+file = "config/fancymenu/assets/ainforge-logo-32x32.icns"
 hash = "8d55a2fbec4553aec791072ec0469832642722a23dbc5a3bfcea7424f8f82e77"
 
 [[files]]
-file = "config/yosbr/config/fancymenu/assets/ainforge-logo-32x32.png"
+file = "config/fancymenu/assets/ainforge-logo-32x32.png"
 hash = "11b6b03d7e0c7eddf14a617f176150b6b965c2df487b12921c5e3a8ada93fce0"
 
 [[files]]
-file = "config/yosbr/config/fancymenu/assets/ainforge-logo-500x500.png"
+file = "config/fancymenu/assets/ainforge-logo-500x500.png"
 hash = "e0d12989e5db9e72251a10070f60bacc014cb8501ded5f30ad312dccd2a89ee4"
 
 [[files]]
-file = "config/yosbr/config/fancymenu/assets/discord-logo.png"
+file = "config/fancymenu/assets/discord-logo.png"
 hash = "287f3d38a678cc95e2fdee4f02c7f799f979202728820dea5137d7d667f66935"
 
 [[files]]
-file = "config/yosbr/config/fancymenu/assets/github-logo.png"
+file = "config/fancymenu/assets/github-logo.png"
 hash = "25223715214f2e16a8bf62983475b2d2d6baf69fb6cc20bf1f3db688f3fd8198"
 
 [[files]]
-file = "config/yosbr/config/fancymenu/assets/modrinth-logo.png"
+file = "config/fancymenu/assets/modrinth-logo.png"
 hash = "a96065632dd2399ae6457f13035f540fd3d6c1adeb9051b6ab2de4afaf734772"
 
 [[files]]
-file = "config/yosbr/config/fancymenu/assets/playlegend-button-text.txt"
+file = "config/fancymenu/assets/playlegend-button-text.txt"
 hash = "905122af4974f18d94d7156fd17e33d7f2ee8ec1428fbb7a6b26f5b72a783243"
 
 [[files]]
-file = "config/yosbr/config/fancymenu/customizablemenus.txt"
-hash = "524fe7185b17f9ef81a7d755abdded0542edcc25891c0e33f1a6a31fe3721aa2"
+file = "config/fancymenu/customizablemenus.txt"
+hash = "fea7a6e2500ee47c28694052c3c8016d17604ffa3f7ae23deac61ddce08ff83f"
 
 [[files]]
-file = "config/yosbr/config/fancymenu/customization/generic_dirt_message_screen_layout.txt"
+file = "config/fancymenu/customization/generic_dirt_message_screen_layout.txt"
 hash = "4faae45505e7515da47084e184ffad3a466a8eec5d234ecdec53d6f31cd12363"
 
 [[files]]
-file = "config/yosbr/config/fancymenu/customization/options_screen_layout.txt"
+file = "config/fancymenu/customization/options_screen_layout.txt"
 hash = "c1e731181e38274e7adbda2e5d43d8c546f06e22dcabc64d58fa18cc59dd5101"
 
 [[files]]
-file = "config/yosbr/config/fancymenu/customization/pause_screen_layout.txt"
+file = "config/fancymenu/customization/pause_screen_layout.txt"
 hash = "156a6ab3dc24d5086ce246c87802e34f896a3add0afa70157556080ef89d81f3"
 
 [[files]]
-file = "config/yosbr/config/fancymenu/customization/receiving_level_screen_layout.txt"
+file = "config/fancymenu/customization/receiving_level_screen_layout.txt"
 hash = "04c721749474fbaedcd2d892409d4de94b48f943a10709c7551e62772fb2e6b9"
 
 [[files]]
-file = "config/yosbr/config/fancymenu/customization/title_screen_layout.txt"
+file = "config/fancymenu/customization/title_screen_layout.txt"
 hash = "5c1bf61b9f84d03bb67e94486a46568c3bfdd50e869447806b5803d0653122aa"
 
 [[files]]
-file = "config/yosbr/config/fancymenu/customization/universal_layout_auto_scaling.txt"
+file = "config/fancymenu/customization/universal_layout_auto_scaling.txt"
 hash = "9562aca837197d0934b956b3eea58efc850224df7823ed9a0e3588967cff2dc0"
 
 [[files]]
-file = "config/yosbr/config/fancymenu/customization/universal_layout_with_slideshow.txt"
+file = "config/fancymenu/customization/universal_layout_with_slideshow.txt"
 hash = "ee6312722d83ee568e38e144a9154d39654ad96a5da78a0a44faa728c59c9540"
 
 [[files]]
-file = "config/yosbr/config/fancymenu/customization/universal_layout_without_slideshow.txt"
-hash = "147e96a1b9ca4ac24f164d49b5dc8bd57290de414cf76581a45fb752ca9eef9e"
+file = "config/fancymenu/customization/universal_layout_without_slideshow.txt"
+hash = "5e50e01034c994836e5e72835ed458ba0982ae042196125a0e980aa9d0c60bf1"
 
 [[files]]
-file = "config/yosbr/config/fancymenu/layout_editor/widgets/element_layer_control.lewidget"
+file = "config/fancymenu/layout_editor/widgets/element_layer_control.lewidget"
 hash = "d4e66bc22fcfa56158ca7100017623c71b1437fb4722229b6e064e0a48a5f5de"
 
 [[files]]
-file = "config/yosbr/config/fancymenu/legacy_checklist.txt"
+file = "config/fancymenu/legacy_checklist.txt"
 hash = "9a25d3dc708e43eabafce5479a13c02dae15bc7f673afb2745b8b2ba48a97dc0"
 
 [[files]]
-file = "config/yosbr/config/fancymenu/options.txt"
-hash = "7711c996164cc4cf283513b19cb1a2289477160f994bd0bd5733cc27605667b4"
+file = "config/fancymenu/options.txt"
+hash = "aa9d3836f42a1506a8159b86a27f9d813c063e1dc62dea5c5d13fc9eea0b4973"
 
 [[files]]
-file = "config/yosbr/config/fancymenu/slideshows/ainforge_slideshow/images/aincraft_fox_portal_close_view.png"
-hash = "f448417e5b8e2ca3a4ea9c41967efa0f6c41d38a671b16747b58faf091945bcb"
+file = "config/fancymenu/slideshows/ainforge_slideshow/images/aincraft_fox_portal_close_view.png"
+hash = "5006b779701384876285fbac5fdd7c7d803f0ad801997c8e3bd78ad4e69f6b67"
 
 [[files]]
-file = "config/yosbr/config/fancymenu/slideshows/ainforge_slideshow/images/aincraft_fox_portal_far_view.png"
-hash = "c93097597bb585a66c01e8eaf437c2b7bd4aa882fffbb38691985769080e3b13"
+file = "config/fancymenu/slideshows/ainforge_slideshow/images/aincraft_fox_portal_far_view.png"
+hash = "a6e0b674ec9d7ebebb82f03f2bd62f1f3fdd8b1cfbcf62ef41ef2f647492178d"
 
 [[files]]
-file = "config/yosbr/config/fancymenu/slideshows/ainforge_slideshow/images/aincraft_fox_reflection.png"
-hash = "6eb042527a30296ed1314dc10cc7908db52df1880b6c62f8369206261ffee2c5"
+file = "config/fancymenu/slideshows/ainforge_slideshow/images/aincraft_fox_reflection.png"
+hash = "cf16d19f17f1cd7f40ae6a054a9afbe470888fd91d0a65ddff287581f359c8df"
 
 [[files]]
-file = "config/yosbr/config/fancymenu/slideshows/ainforge_slideshow/images/aincraft_ocelot_moon.png"
-hash = "1329c31f3160cf4d1924b1e68cdcdd29c7b03276eb1c4224b80110e938a7d68e"
+file = "config/fancymenu/slideshows/ainforge_slideshow/images/aincraft_ocelot_moon.png"
+hash = "cfe9715c391a3d545b874234ad5a541a60ebb73ecdf8eafec7c087c3b3bb74c8"
 
 [[files]]
-file = "config/yosbr/config/fancymenu/slideshows/ainforge_slideshow/images/aincraft_rabbit_moon.png"
-hash = "a89eb4541ebfb1338e6871640a9bd01a534d9c17b6bfe0acaed9ac84fc6d60b4"
+file = "config/fancymenu/slideshows/ainforge_slideshow/images/aincraft_rabbit_moon.png"
+hash = "0e11e70f62e25e422dbeb65118da8b85fe9f48ad3f2a8338e48300cd67e13355"
 
 [[files]]
-file = "config/yosbr/config/fancymenu/slideshows/ainforge_slideshow/images/aincraft_rabbit_moon_2.png"
-hash = "bbcbddbe019d673a00c828d902181ae40fef19b131b245fc2b3ed3c46e93989c"
+file = "config/fancymenu/slideshows/ainforge_slideshow/images/aincraft_rabbit_moon_2.png"
+hash = "60b3f74c98e0647b7614928840765dcf31688d4ae11850a70829c741b7b374a4"
 
 [[files]]
-file = "config/yosbr/config/fancymenu/slideshows/ainforge_slideshow/images/aincraft_rabbit_portal.png"
-hash = "c6696e5ff2dccc41cef2a91ef9b57a2dbd399db4ec1061dcda446276a659a1ec"
+file = "config/fancymenu/slideshows/ainforge_slideshow/images/aincraft_rabbit_portal.png"
+hash = "230c9d7a8ff311b1e7150cf33f81d4fdb6502895e5018994ac0d0ca765480cbf"
 
 [[files]]
-file = "config/yosbr/config/fancymenu/slideshows/ainforge_slideshow/images/aincraft_turtles_underwater.png"
-hash = "c3e451c0ce16aa912f75f68470256f59258ccf8b33ad5cc6e2ddc4cb83e1a274"
+file = "config/fancymenu/slideshows/ainforge_slideshow/images/aincraft_turtles_underwater.png"
+hash = "a93e24bc04ef9fbc18b1b5d583b808edcada2d5f1a28a742dc939c4ac5b38f8a"
 
 [[files]]
-file = "config/yosbr/config/fancymenu/slideshows/ainforge_slideshow/images/city_airship.png"
-hash = "2b503ebec2652df5e226f125dc0944d425c70205e2f8a91befcf9097463f6ce0"
+file = "config/fancymenu/slideshows/ainforge_slideshow/images/city_airship.png"
+hash = "904b07ed1f85ae03c2f946be944bbcfb0c42c19edac706eb574ae24ec96fb610"
 
 [[files]]
-file = "config/yosbr/config/fancymenu/slideshows/ainforge_slideshow/images/city_engineer.png"
-hash = "6ccdd41caaf1073125480fe2d896dbe0bcc201d2e548a86f804d457b0c7abbb9"
+file = "config/fancymenu/slideshows/ainforge_slideshow/images/city_engineer.png"
+hash = "93607a8869bef67baac6c244b3df97665e49a5e76fea907bc79331c34f111424"
 
 [[files]]
-file = "config/yosbr/config/fancymenu/slideshows/ainforge_slideshow/images/city_lava.png"
-hash = "8ae7f6fd40d7d7efc339be2bba272a5cd8ef6191f2d2b80c9ea8aca64ec9f935"
+file = "config/fancymenu/slideshows/ainforge_slideshow/images/city_lava.png"
+hash = "38b284e9a17842d7b4e8b1ad9acbb990780ac2d611fd8b5f5ca6a5798cc3721f"
 
 [[files]]
-file = "config/yosbr/config/fancymenu/slideshows/ainforge_slideshow/images/factory_cactus_farm.png"
-hash = "849101539ab1ebf73c324df31906c5fc092d2d665ca9949668d877e957c9d44d"
+file = "config/fancymenu/slideshows/ainforge_slideshow/images/factory_cactus_farm.png"
+hash = "30c9c42b13c92bd6fa6a1474f5c24ab9922b880c09e1c7c28500424ae8a898fc"
 
 [[files]]
-file = "config/yosbr/config/fancymenu/slideshows/ainforge_slideshow/images/factory_cactus_field.png"
-hash = "0a40e1a14578e580d1e0f5273655178a79a5df69f791accfc62c426c126f6c2b"
+file = "config/fancymenu/slideshows/ainforge_slideshow/images/factory_cactus_field.png"
+hash = "3932970c77f88bbe19c644e64d6ce74419fab46a76de1e042cf43bbd7e0afe24"
 
 [[files]]
-file = "config/yosbr/config/fancymenu/slideshows/ainforge_slideshow/images/factory_owyn.png"
-hash = "b3a916ea36c191998a3211cb4bdf6379fcb4ae1cdd90dfccc7adccf0b3e66d7e"
+file = "config/fancymenu/slideshows/ainforge_slideshow/images/factory_owyn.png"
+hash = "b90d3162286590f43671cfa2ff9def9bdb1f8b1bc97b7c441d48a6bf93241d05"
 
 [[files]]
-file = "config/yosbr/config/fancymenu/slideshows/ainforge_slideshow/images/farmzone_beach.png"
-hash = "401a992ad3e7df686de1f8964d6fe11a1bc5f2b773373e62071da48a6a944bd6"
+file = "config/fancymenu/slideshows/ainforge_slideshow/images/farmzone_beach.png"
+hash = "f37ea4983128958b21f5121f2f286fbf2b1ae470e6b77c11801237adf8e88278"
 
 [[files]]
-file = "config/yosbr/config/fancymenu/slideshows/ainforge_slideshow/images/farmzone_coal_mine.png"
-hash = "5f4e7acea8ad0e33c4834a3f5c237b125a0825cae2a68b2a0eec9c5b6653524c"
+file = "config/fancymenu/slideshows/ainforge_slideshow/images/farmzone_coal_mine.png"
+hash = "001eb0ffd81dfc46885cefd05fd17255bf4071903a3cd0b77e0da7322f61e12e"
 
 [[files]]
-file = "config/yosbr/config/fancymenu/slideshows/ainforge_slideshow/images/farmzone_mansion.png"
-hash = "ee5aec451ddac27349ad9561709a609cc79c01a35fe2e07f9cd38be6175ad73c"
+file = "config/fancymenu/slideshows/ainforge_slideshow/images/farmzone_mansion.png"
+hash = "b2394736ee88b02467275c4f0cef42392af1ac74e98a70777a5c6c4bf11255c4"
 
 [[files]]
-file = "config/yosbr/config/fancymenu/slideshows/ainforge_slideshow/images/farmzone_mushroom.png"
-hash = "82992752ef6df3c6a78bb067dd22f24d9c808d4708d622df6fccec86d24e4f24"
+file = "config/fancymenu/slideshows/ainforge_slideshow/images/farmzone_mushroom.png"
+hash = "6de83a0709db84850b98d997a69b7da4396932b9974e65915b207b7f83ecd140"
 
 [[files]]
-file = "config/yosbr/config/fancymenu/slideshows/ainforge_slideshow/properties.txt"
+file = "config/fancymenu/slideshows/ainforge_slideshow/properties.txt"
 hash = "6600f8c73f8a5ecb0fd6b746157e398e4a44157828eb9e761728145cdac57e21"
 
 [[files]]
-file = "config/yosbr/config/fancymenu/ui_themes/dark.json"
+file = "config/fancymenu/ui_themes/dark.json"
 hash = "45541e5c5019585b9c4ff114aed530826129e8a7ac6866b5d5fe41dd278abae4"
 
 [[files]]
-file = "config/yosbr/config/fancymenu/ui_themes/light.json"
+file = "config/fancymenu/ui_themes/light.json"
 hash = "6954379d658fdf496f162792a3244f0f08635858ed4b0553a718a7ef63b8a620"
 
 [[files]]
-file = "config/yosbr/config/gammautils.json"
+file = "config/gammautils.json"
 hash = "83c2e7df169ebea8893989f03747e14b9c4b4f7c2bf6f17893ddc8f71bd81ad4"
 
 [[files]]
-file = "config/yosbr/config/modmenu.json"
+file = "config/modmenu.json"
 hash = "b19d562f6df3ed8475f7e40e96a87271a23aabfdd14c4ebe350610db01db7391"
 
 [[files]]
-file = "config/yosbr/config/notes.json"
+file = "config/notes.json"
 hash = "a9da7a482da6967f0f2fda64b9b2102540fd6f7b7dd225aad1383114ea55f5bb"
 
 [[files]]
-file = "config/yosbr/config/resourcify.json"
+file = "config/resourcify.json"
 hash = "de7fbe7f9ae3f1711542ebe2d82b107c9e450fb47dbfe3692a39bf21ac754ee5"
 
 [[files]]
-file = "config/yosbr/config/scoreboard-overhaul.json"
+file = "config/scoreboard-overhaul.json"
 hash = "ab3880533700e28d180eabd6308f89282ab2a54c055cd0baa7b5de22f93bdb9b"
 
 [[files]]
-file = "config/yosbr/config/sodium-extra-options.json"
+file = "config/sodium-extra-options.json"
 hash = "617604671b92dc3dd09271ba0305d8637625a51d293ec9b47aceb78739c2aa6a"
 
 [[files]]
-file = "config/yosbr/config/sodium-options.json"
+file = "config/sodium-options.json"
 hash = "ded4ccae4a94fb330cabd8485271598d201c211c76b161b442da478071d344e7"
 
 [[files]]
-file = "config/yosbr/config/xaerominimap.txt"
-hash = "fd23f8578b8bc458b9ad26317f9b7f5a58a9afb9011c7357c6a7368b0c919d96"
+file = "config/xaerominimap.txt"
+hash = "5108ab28fb89409cce72dc1770befbcd9a01f60b539c271f5686095874d33228"
 
 [[files]]
-file = "config/yosbr/config/xaerominimap_entities.json"
+file = "config/xaerominimap_entities.json"
 hash = "637d2ab7c990f4647bf3c933ddfd07ff419e8efd7a8a22fc4a7f13185ae7ff6f"
 
 [[files]]
-file = "config/yosbr/config/xaeroworldmap.txt"
+file = "config/xaeroworldmap.txt"
 hash = "b0fd80b089abbf8f778dca8be6e1ee2433ca3948c8294c4f518efdca7b7f64a5"
-
-[[files]]
-file = "config/yosbr/notes/remote/playlegend.net/Weapon Progression.txt"
-hash = "0f13939b6c5ef0237bf534aeb8ca964d312b0faa2965551b78bbddfe4e460956"
-
-[[files]]
-file = "config/yosbr/notes/remote/playlegend.net/[1] Allrounder Kit.txt"
-hash = "28c0ca6058b03ac64b776ad970a671bf76382d2a821879e00acac2d903bb1480"
-
-[[files]]
-file = "config/yosbr/notes/remote/playlegend.net/[1] Coin Kit.txt"
-hash = "3610dc7e7d85d7a04bc677f724b87923193beeac120e4023d688f594f9ddcc38"
-
-[[files]]
-file = "config/yosbr/notes/remote/playlegend.net/[1] Damage Kit.txt"
-hash = "238a9096ce90da5902d14fe881fab4b9b0fae9cccdf4313f491a35f4f80e6877"
-
-[[files]]
-file = "config/yosbr/notes/remote/playlegend.net/[1] Manufacture Kit.txt"
-hash = "2bcc82479c87d8a50847fe9ef0e1971f81707998eff108ba1bfd6c2007cb15bb"
-
-[[files]]
-file = "config/yosbr/notes/remote/playlegend.net/[1] Resource Kit.txt"
-hash = "f4b88309cb448804bbc2961fa0ff9bc2dbad0515aa282146aa9beb5ce72bac18"
-
-[[files]]
-file = "config/yosbr/notes/remote/playlegend.net/[1] Tank Kit.txt"
-hash = "dbe2034ab6a7808536f058bcc2fb86087658a0b173b6a41a86ad57ec845c5af4"
-
-[[files]]
-file = "config/yosbr/notes/remote/playlegend.net/[2] Allrounder Kit.txt"
-hash = "8e5f14a16301d8180127d307d072bd1cb2c81c7b9284642251407d29e77e25de"
-
-[[files]]
-file = "config/yosbr/notes/remote/playlegend.net/[2] Coin Kit.txt"
-hash = "3737a298c8ada75771897c661d2e85cd495ec0bb1a5a3e729f2d07e480b70660"
-
-[[files]]
-file = "config/yosbr/notes/remote/playlegend.net/[2] Damage Kit.txt"
-hash = "fe6bc5a1e792bc378a77ad73a4c4796724f7208b89dff637ca9d53d5d7f212f4"
-
-[[files]]
-file = "config/yosbr/notes/remote/playlegend.net/[2] Manufacture Kit.txt"
-hash = "50f9a88ee06cbd060b3eacbb7cd04073eb8c1f6db8a1885ac7d8b212ac6fd70a"
-
-[[files]]
-file = "config/yosbr/notes/remote/playlegend.net/[2] Resource Kit.txt"
-hash = "c83b35d718e2670bd290ee82d25280477661012fc7ca70d5444c94625405abd8"
-
-[[files]]
-file = "config/yosbr/notes/remote/playlegend.net/[2] Tank Kit.txt"
-hash = "7fe5c7c05882b9c0e53a628f3d3e7dcfbd8be1ebdb10af0bdbda043a16c1ceac"
-
-[[files]]
-file = "config/yosbr/notes/remote/playlegend.net/[3] Allrounder Kit.txt"
-hash = "62d38a8255ac87f8a496ef3351a513cfc229a24c7b20ab9592d5e119fe052cbc"
-
-[[files]]
-file = "config/yosbr/notes/remote/playlegend.net/[3] Coin Kit.txt"
-hash = "938b992bad74c7b804a4b5d836dd578e894b0f1c0d1f8e6d2701e14e1b600a76"
-
-[[files]]
-file = "config/yosbr/notes/remote/playlegend.net/[3] Damage Kit.txt"
-hash = "e20c1cdcdfdb6859bedd7cf79e4a2d3278c7871f2d0a9b5c266de81e7d87fd86"
-
-[[files]]
-file = "config/yosbr/notes/remote/playlegend.net/[3] Manufacture Kit.txt"
-hash = "c609f2a6f194385e791c832feb96ed892ff80c3f9abf66e0111f24eb3024666e"
-
-[[files]]
-file = "config/yosbr/notes/remote/playlegend.net/[3] Resource Kit.txt"
-hash = "8c4ec596d5e65ba727c20ecf0f9226955a1be8c441da006d27b3606ff8ed4b05"
-
-[[files]]
-file = "config/yosbr/notes/remote/playlegend.net/[3] Tank Kit.txt"
-hash = "f8b0f380c08da786e45cc6a641bb1c233dbb9b100a08f29b9cbdd612fe3998bf"
-
-[[files]]
-file = "config/yosbr/notes/remote/playlegend.net/[4] Allrounder Kit.txt"
-hash = "6eedd44f028e1ad1cf703d29c84ce3b60083d369f7cba1612dbb0a8e35bae707"
-
-[[files]]
-file = "config/yosbr/notes/remote/playlegend.net/[4] Coin Kit.txt"
-hash = "d90efa1c00e0519c49247c27f48480fb5a5390e6b6f09e7786fda64fa55ada4f"
-
-[[files]]
-file = "config/yosbr/notes/remote/playlegend.net/[4] Damage Kit.txt"
-hash = "9da67070110db4e0a84194d6e478db630606f06744d5062f298bb48aaf6b2c89"
-
-[[files]]
-file = "config/yosbr/notes/remote/playlegend.net/[4] Manufacture Kit.txt"
-hash = "f2892fbe8710e0c80eae24817324c325bd76ba04f9a2c6fe0a98ff33d457015d"
-
-[[files]]
-file = "config/yosbr/notes/remote/playlegend.net/[4] Resource Kit.txt"
-hash = "52d9c526a8bb357484f1d6f95db9f9b189b3d5f997317f9890e07120a557184e"
-
-[[files]]
-file = "config/yosbr/notes/remote/playlegend.net/[4] Tank Kit.txt"
-hash = "2a20eb04ca5eeb5de227bbd32bce9ea951c46e8bf281e13e131f103277747ac3"
-
-[[files]]
-file = "config/yosbr/notes/remote/playlegend.net/[5] Allrounder Kit.txt"
-hash = "a86d813dfc64dcc573077f9aa0632e8cc0ca7aba38b8270204908ec440d7f45c"
-
-[[files]]
-file = "config/yosbr/notes/remote/playlegend.net/[5] Coin Kit.txt"
-hash = "51cf1a987bfe392da1fb60ecc1c133768cfa715216e37b962ddbbbbdcfab19aa"
-
-[[files]]
-file = "config/yosbr/notes/remote/playlegend.net/[5] Damage Kit.txt"
-hash = "b3af32ace6e93a9e19ab3716998018dc444c5fcd213bbc1fb72aa2ebe095b9f8"
-
-[[files]]
-file = "config/yosbr/notes/remote/playlegend.net/[5] Manufacture Kit.txt"
-hash = "80c9f52991b671324e80d8d81e3e1ee0a3ce3ec59cddd2f09f368c4427a903cd"
-
-[[files]]
-file = "config/yosbr/notes/remote/playlegend.net/[5] Resource Kit.txt"
-hash = "845df2940a1289625b6bd346bbee49b821da11e4e2807c9ae5cbf98655c25029"
-
-[[files]]
-file = "config/yosbr/notes/remote/playlegend.net/[5] Tank Kit.txt"
-hash = "fe1d752275a9550a0b4aee94605f4412db8e1ddfa05182be807af2e20b25c77b"
-
-[[files]]
-file = "config/yosbr/notes/remote/playlegend.net/[6] Coin Kit.txt"
-hash = "e664f5ab6459e3485ca32920aa380738ecc1be6d72fd08b6881980cd337dceac"
-
-[[files]]
-file = "config/yosbr/notes/remote/playlegend.net/[6] Damage Kit.txt"
-hash = "47b321222d980934fb0e865c0b0f00ce80e28365e494cecb7c4ee4d799339790"
-
-[[files]]
-file = "config/yosbr/notes/remote/playlegend.net/[6] Manufacture Kit.txt"
-hash = "46093a26c19cf63bd7d151cf113989ffefaa228c68327ecd07fedce5a46a2380"
-
-[[files]]
-file = "config/yosbr/notes/remote/playlegend.net/[6] Resource Kit.txt"
-hash = "dc26475609c68f15b68fe66ae12679bcb23d2b2c835ef42411b9e6254f4bcae0"
-
-[[files]]
-file = "config/yosbr/notes/remote/playlegend.net/[6] Tank Kit.txt"
-hash = "6c1e711288b7a31b2df6a206492eaf5f079ce07d7ba526bd54cb808ccbfcd95c"
-
-[[files]]
-file = "config/yosbr/notes/remote/playlegend.net/[7] Coin Kit.txt"
-hash = "5bea40ab1b2a45934cc3e4440e3c6ad9d112a9d38730aa4293e14de842b4d036"
-
-[[files]]
-file = "config/yosbr/notes/remote/playlegend.net/[7] Damage Kit.txt"
-hash = "78d7e52b5ef55b7646916d8135259a82c53fed9bc9063a5f234b81e303760a45"
-
-[[files]]
-file = "config/yosbr/notes/remote/playlegend.net/[7] Manufacture Kit.txt"
-hash = "95cb8ccfbe8caa05f35da7ad4ff7e5525be33f66f5cf6e636e637939924a4cb7"
-
-[[files]]
-file = "config/yosbr/notes/remote/playlegend.net/[7] Resource Kit.txt"
-hash = "1b357011edc203b712f7405392c4c6dd75f78b58562925c903335b5dbf1f4bcd"
-
-[[files]]
-file = "config/yosbr/notes/remote/playlegend.net/[7] Tank Kit.txt"
-hash = "d24eafd56dde5b7a05751d2cfc671ce6079b23f01966426adaab545543ea066c"
 
 [[files]]
 file = "config/yosbr/options.amecsapi.txt"
@@ -457,12 +297,12 @@ metafile = true
 
 [[files]]
 file = "mods/bettergrassify.pw.toml"
-hash = "d74546a98e3af1867539d80bdf9d188968920a7df8e57ccb3b7a55b36a37eb7a"
+hash = "13afe1299cb5fe3373051757f16c51c9b9213aa298687ea61dac964e9bd211a4"
 metafile = true
 
 [[files]]
 file = "mods/cclive-utilities.pw.toml"
-hash = "1c28913a72ea7543494ef9b5ba6c453b2c9ee7e98685cefe8d3168ae76022c75"
+hash = "5398b28e35c0f98f5b8518fa829734a95ada455eb7f9ca925162c78aea02f737"
 metafile = true
 
 [[files]]
@@ -477,7 +317,7 @@ metafile = true
 
 [[files]]
 file = "mods/chatpatches.pw.toml"
-hash = "05ff062d9cbcbd950a409f81ba2c53f5223d59e727e7a4cf9f7b1a09dcdcf0df"
+hash = "84b041964118df7ccc05c6bedbc53350e54271742f02c6f21b4a1f3affd2986d"
 metafile = true
 
 [[files]]
@@ -497,12 +337,12 @@ metafile = true
 
 [[files]]
 file = "mods/distanthorizons.pw.toml"
-hash = "a071f64a28803c0aeebb2c81a497a4277f591e223b7ec6e5eca05dc916bd5e5e"
+hash = "dc366d0928db32e9221aabf2fc3e39b0a250bff8ebcb6d41e1d7263a30fb5084"
 metafile = true
 
 [[files]]
 file = "mods/entityculling.pw.toml"
-hash = "77a4661471dbfc2088b017170a68fa0d60e3b7ef8b773d097fbee58e2cda5f3d"
+hash = "61a4d37045aff0ca90bb6abb592a7d10435eee58268785c55693030492704b68"
 metafile = true
 
 [[files]]
@@ -522,7 +362,7 @@ metafile = true
 
 [[files]]
 file = "mods/fabric-language-kotlin.pw.toml"
-hash = "d7c055f277c1751122d9abc5f09015e629699e04a9383cd0c666b33436293079"
+hash = "61afd7af5c645ffd966b2bd86be944eacd1e48a8044e8f67082225d4d9989f0c"
 metafile = true
 
 [[files]]
@@ -552,7 +392,7 @@ metafile = true
 
 [[files]]
 file = "mods/fzzy-config.pw.toml"
-hash = "d309e4b5e1f94c2fc67f5afa1f624ec2424ada29256ad6a490f0a3ad27abd5fe"
+hash = "959457f4755ab57336e2e23628acb52cc90a72a6e8877294f2bdb21231f82569"
 metafile = true
 
 [[files]]
@@ -562,7 +402,7 @@ metafile = true
 
 [[files]]
 file = "mods/immediatelyfast.pw.toml"
-hash = "e7e78f8163a6bf6dccf8a04d3ed36c431a824b23c0f797760d7d1ecf1ef4658f"
+hash = "7aac72ca216e1811cfab54cbae47fae18138b4e358620455fbb1bf4b2ff31682"
 metafile = true
 
 [[files]]
@@ -647,12 +487,12 @@ metafile = true
 
 [[files]]
 file = "mods/xaeros-minimap.pw.toml"
-hash = "d72a8ffcacdd19e6d71eccb4b112cf763bf75b2c438506e01ab0aa76e91c6325"
+hash = "17bfc25b3763413efbfcd5ae12fd2bc9cc82e241fc47e2921978b55f3ff5bcec"
 metafile = true
 
 [[files]]
 file = "mods/xaeros-world-map.pw.toml"
-hash = "f3b0dc8728401319a897b51835b2b65898dc3b769aa1f1ed0a1f513bd91c409a"
+hash = "079cf592a9a7b0105a5f6415091780453acca6a3173276eceed56d019821a6c6"
 metafile = true
 
 [[files]]
@@ -669,6 +509,174 @@ metafile = true
 file = "mods/zoomify.pw.toml"
 hash = "59e45ade7176229ff9750ae85356ba4a92b5124592dd09b0244c861cfda08575"
 metafile = true
+
+[[files]]
+file = "notes/remote/playlegend.net/Placeholder.txt"
+hash = "6634b1db823905655e47bbec0fb07acb155e6f3dd14100b90c0efce0f7d57a03"
+
+[[files]]
+file = "notes/remote/playlegend.net/Weapon Progression.txt"
+hash = "3215621855777ae5f88270ebf8e2f68e69b90808e0b5a9437020cdbf8b41ae17"
+
+[[files]]
+file = "notes/remote/playlegend.net/[1] Allrounder Kit.txt"
+hash = "28c0ca6058b03ac64b776ad970a671bf76382d2a821879e00acac2d903bb1480"
+
+[[files]]
+file = "notes/remote/playlegend.net/[1] Coin Kit.txt"
+hash = "3610dc7e7d85d7a04bc677f724b87923193beeac120e4023d688f594f9ddcc38"
+
+[[files]]
+file = "notes/remote/playlegend.net/[1] Damage Kit.txt"
+hash = "238a9096ce90da5902d14fe881fab4b9b0fae9cccdf4313f491a35f4f80e6877"
+
+[[files]]
+file = "notes/remote/playlegend.net/[1] Manufacture Kit.txt"
+hash = "2bcc82479c87d8a50847fe9ef0e1971f81707998eff108ba1bfd6c2007cb15bb"
+
+[[files]]
+file = "notes/remote/playlegend.net/[1] Resource Kit.txt"
+hash = "b633b526876bb1bf2c975644fc92b094e0d81d13ed81438c309aafbc543f684e"
+
+[[files]]
+file = "notes/remote/playlegend.net/[1] Tank Kit.txt"
+hash = "dbe2034ab6a7808536f058bcc2fb86087658a0b173b6a41a86ad57ec845c5af4"
+
+[[files]]
+file = "notes/remote/playlegend.net/[2] Allrounder Kit.txt"
+hash = "8e5f14a16301d8180127d307d072bd1cb2c81c7b9284642251407d29e77e25de"
+
+[[files]]
+file = "notes/remote/playlegend.net/[2] Coin Kit.txt"
+hash = "3737a298c8ada75771897c661d2e85cd495ec0bb1a5a3e729f2d07e480b70660"
+
+[[files]]
+file = "notes/remote/playlegend.net/[2] Damage Kit.txt"
+hash = "fe6bc5a1e792bc378a77ad73a4c4796724f7208b89dff637ca9d53d5d7f212f4"
+
+[[files]]
+file = "notes/remote/playlegend.net/[2] Manufacture Kit.txt"
+hash = "50f9a88ee06cbd060b3eacbb7cd04073eb8c1f6db8a1885ac7d8b212ac6fd70a"
+
+[[files]]
+file = "notes/remote/playlegend.net/[2] Resource Kit.txt"
+hash = "94e1d839ecb74c8cc5793f1a2285da69d615bf39686d09da7bcd5d780f6e7777"
+
+[[files]]
+file = "notes/remote/playlegend.net/[2] Tank Kit.txt"
+hash = "11e107314de11c380fdd3013d511fde1c7808880a7c942424868770a799bb608"
+
+[[files]]
+file = "notes/remote/playlegend.net/[3] Allrounder Kit.txt"
+hash = "62d38a8255ac87f8a496ef3351a513cfc229a24c7b20ab9592d5e119fe052cbc"
+
+[[files]]
+file = "notes/remote/playlegend.net/[3] Coin Kit.txt"
+hash = "938b992bad74c7b804a4b5d836dd578e894b0f1c0d1f8e6d2701e14e1b600a76"
+
+[[files]]
+file = "notes/remote/playlegend.net/[3] Damage Kit.txt"
+hash = "e20c1cdcdfdb6859bedd7cf79e4a2d3278c7871f2d0a9b5c266de81e7d87fd86"
+
+[[files]]
+file = "notes/remote/playlegend.net/[3] Manufacture Kit.txt"
+hash = "c609f2a6f194385e791c832feb96ed892ff80c3f9abf66e0111f24eb3024666e"
+
+[[files]]
+file = "notes/remote/playlegend.net/[3] Resource Kit.txt"
+hash = "ee63c5591c1eb30b9c86c8f6c7514e9a610f3578e903ff0f86b142be6bb8de1f"
+
+[[files]]
+file = "notes/remote/playlegend.net/[3] Tank Kit.txt"
+hash = "74df00f2c9270ebbda6ed64041ed5a8f2a2c8313965ab9a15f4f8788ed39b469"
+
+[[files]]
+file = "notes/remote/playlegend.net/[4] Allrounder Kit.txt"
+hash = "6eedd44f028e1ad1cf703d29c84ce3b60083d369f7cba1612dbb0a8e35bae707"
+
+[[files]]
+file = "notes/remote/playlegend.net/[4] Coin Kit.txt"
+hash = "d90efa1c00e0519c49247c27f48480fb5a5390e6b6f09e7786fda64fa55ada4f"
+
+[[files]]
+file = "notes/remote/playlegend.net/[4] Damage Kit.txt"
+hash = "9da67070110db4e0a84194d6e478db630606f06744d5062f298bb48aaf6b2c89"
+
+[[files]]
+file = "notes/remote/playlegend.net/[4] Manufacture Kit.txt"
+hash = "f2892fbe8710e0c80eae24817324c325bd76ba04f9a2c6fe0a98ff33d457015d"
+
+[[files]]
+file = "notes/remote/playlegend.net/[4] Resource Kit.txt"
+hash = "7e1ab7bb0716a34be60444a91fa0e68636bb741c67a484ed88455f731bbf0d19"
+
+[[files]]
+file = "notes/remote/playlegend.net/[4] Tank Kit.txt"
+hash = "9769a712c3c4fd27848787d1f6dec0ca6a551f0be596742957074454282409bf"
+
+[[files]]
+file = "notes/remote/playlegend.net/[5] Allrounder Kit.txt"
+hash = "a86d813dfc64dcc573077f9aa0632e8cc0ca7aba38b8270204908ec440d7f45c"
+
+[[files]]
+file = "notes/remote/playlegend.net/[5] Coin Kit.txt"
+hash = "51cf1a987bfe392da1fb60ecc1c133768cfa715216e37b962ddbbbbdcfab19aa"
+
+[[files]]
+file = "notes/remote/playlegend.net/[5] Damage Kit.txt"
+hash = "b3af32ace6e93a9e19ab3716998018dc444c5fcd213bbc1fb72aa2ebe095b9f8"
+
+[[files]]
+file = "notes/remote/playlegend.net/[5] Manufacture Kit.txt"
+hash = "80c9f52991b671324e80d8d81e3e1ee0a3ce3ec59cddd2f09f368c4427a903cd"
+
+[[files]]
+file = "notes/remote/playlegend.net/[5] Resource Kit.txt"
+hash = "e0bcc59c90d33fc47a3ec86f28d730ab7f06e5fdf2659c0c1fe556a6ec24c74a"
+
+[[files]]
+file = "notes/remote/playlegend.net/[5] Tank Kit.txt"
+hash = "d56cc367f79c9092fe9d42eb5de4c0374ee8a0c7ca61d8a89d76a9723a1328de"
+
+[[files]]
+file = "notes/remote/playlegend.net/[6] Coin Kit.txt"
+hash = "e664f5ab6459e3485ca32920aa380738ecc1be6d72fd08b6881980cd337dceac"
+
+[[files]]
+file = "notes/remote/playlegend.net/[6] Damage Kit.txt"
+hash = "47b321222d980934fb0e865c0b0f00ce80e28365e494cecb7c4ee4d799339790"
+
+[[files]]
+file = "notes/remote/playlegend.net/[6] Manufacture Kit.txt"
+hash = "46093a26c19cf63bd7d151cf113989ffefaa228c68327ecd07fedce5a46a2380"
+
+[[files]]
+file = "notes/remote/playlegend.net/[6] Resource Kit.txt"
+hash = "dc26475609c68f15b68fe66ae12679bcb23d2b2c835ef42411b9e6254f4bcae0"
+
+[[files]]
+file = "notes/remote/playlegend.net/[6] Tank Kit.txt"
+hash = "6cecdb9513765409b966f44e148fd47fa68b0f1f7d9b7c6424de94b55fff0d79"
+
+[[files]]
+file = "notes/remote/playlegend.net/[7] Coin Kit.txt"
+hash = "5bea40ab1b2a45934cc3e4440e3c6ad9d112a9d38730aa4293e14de842b4d036"
+
+[[files]]
+file = "notes/remote/playlegend.net/[7] Damage Kit.txt"
+hash = "78d7e52b5ef55b7646916d8135259a82c53fed9bc9063a5f234b81e303760a45"
+
+[[files]]
+file = "notes/remote/playlegend.net/[7] Manufacture Kit.txt"
+hash = "95cb8ccfbe8caa05f35da7ad4ff7e5525be33f66f5cf6e636e637939924a4cb7"
+
+[[files]]
+file = "notes/remote/playlegend.net/[7] Resource Kit.txt"
+hash = "1b357011edc203b712f7405392c4c6dd75f78b58562925c903335b5dbf1f4bcd"
+
+[[files]]
+file = "notes/remote/playlegend.net/[7] Tank Kit.txt"
+hash = "db670a5efe241a7f11f2a2212c640d6af831c47adaa859959c776fbe4483add6"
 
 [[files]]
 file = "resourcepacks/monocraft-resourcepack.pw.toml"

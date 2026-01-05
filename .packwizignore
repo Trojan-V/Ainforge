@@ -2,8 +2,4 @@
 # See https://git-scm.com/docs/gitignore
 
 /.github
-/uncompressed-images
-
-/TODO.md
-/CHANGELOG.md
-/CHECKLIST.md
+/.dev
