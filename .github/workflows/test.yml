@@ -26,10 +26,12 @@ jobs:
             # Output: Variable 'MODRINTH_PROJECT_VERSION_LIST' containing the list of all Modrinth versions
             - name: Fetch Modrinth Versions
               run: | 
+                delim="EOF_$(date +%s)_$RANDOM"
+
                 {
-                    echo 'MODRINTH_PROJECT_VERSION_LIST<<EOF'
+                    echo "MODRINTH_PROJECT_VERSION_LIST<<$delim"
                     curl -fsSL "$MODRINTH_LIST_ALL_VERSIONS_ENDPOINT"
-                    echo 'EOF'
+                    echo "$delim"
                 } >> "$GITHUB_ENV"
 
             - name: Debug Output fetched Modrinth versions
