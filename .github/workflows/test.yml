@@ -28,7 +28,7 @@ jobs:
             - name: Fetch Modrinth Versions
               run: |
                 curl -fsSL "$MODRINTH_LIST_ALL_VERSIONS_ENDPOINT" -o versions.json
-                cat versions.json
+                jq -r '.[].id' versions.json
 
             # Output: File 'current_versions.json' containing the list of versions seen in the last run
             - name: Load Stored Versions
