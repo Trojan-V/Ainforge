@@ -16,6 +16,7 @@ jobs:
 
         env:
             MODRINTH_LIST_ALL_VERSIONS_ENDPOINT: "https://api.modrinth.com/v2/project/ainforge/version"
+            MODRINTH_VERSION_MESSAGES_JSON: ${{ vars.MODRINTH_VERSION_MESSAGES_JSON }}
             
 
         steps:
