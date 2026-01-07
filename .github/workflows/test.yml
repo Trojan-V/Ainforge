@@ -1,0 +1,51 @@
+name: Sync Modrinth Releases to Discord Channel
+
+on:
+    schedule:
+        - cron: "0/30 * * * *"
+    workflow_dispatch:
+        # No configuration needed, just makes the workflow manually triggerable from the Actions tab on GitHub
+
+jobs:
+    sync-modrinth-to-discord:
+        runs-on: ubuntu-latest
+
+        # The job only needs read access to repository contents, such as repository variables and secrets.
+        permissions:
+            contents: read
+
+        env:
+            MODRINTH_LIST_ALL_VERSIONS_ENDPOINT: "https://api.modrinth.com/v2/project/ainforge/version"
+            
+
+        steps:
+            # Install jq for JSON processing
+            - name: Install jq
+              run: sudo apt-get update && sudo apt-get install -y jq
+
+            # Output: Variable 'MODRINTH_PROJECT_VERSION_LIST' containing the list of all Modrinth versions
+            - name: Fetch Modrinth Versions
+              run: | 
+                {
+                    echo 'MODRINTH_PROJECT_VERSION_LIST<<EOF'
+                    curl -fsSL "$MODRINTH_LIST_ALL_VERSIONS_ENDPOINT"
+                    echo 'EOF'
+                } >> "$GITHUB_ENV"
+
+            - name: Debug Output fetched Modrinth versions
+              run: echo "$MODRINTH_PROJECT_VERSION_LIST"
+
+            # Check if there are new versions since the last run
+            # For that, compare the fetched versions against a stored list in a repository variable
+            #- name: Check for new versions
+            #  run:
+
+            # Check if there are updated versions (e.g., increased download counts)
+            #- name: Check for updated versions
+            #  run:
+
+            # For each new version, send a notification to the Discord channel via webhook
+            #- name: Notify Discord of New Versions
+            #  run:
+
+            
