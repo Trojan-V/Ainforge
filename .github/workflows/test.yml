@@ -25,17 +25,29 @@ jobs:
 
             # Output: File 'versions.json' containing the list of all Modrinth versions
             - name: Fetch Modrinth Versions
-              run: | 
-                curl -fsSL "$MODRINTH_LIST_ALL_VERSIONS_ENDPOINT" -o versions.json
-                echo "Smoke: versions.json bytes=$(wc -c < versions.json), entries=$(jq 'length' versions.json)"
+              run: curl -fsSL "$MODRINTH_LIST_ALL_VERSIONS_ENDPOINT" -o versions.json
 
-            - name: Debug Output fetched Modrinth versions
-              run: echo "$MODRINTH_PROJECT_VERSION_LIST"
+            # Output: File 'current_versions.json' containing the list of versions seen in the last run
+            - name: Load Stored Versions
+              run: echo "${{ vars.MODRINTH_VERSION_MESSAGES_JSON }}" > current_versions.json
 
             # Check if there are new versions since the last run
-            # For that, compare the fetched versions against a stored list in a repository variable
-            #- name: Check for new versions
-            #  run:
+            # For that, compare the fetched versions file against a stored list in a repository variable
+            - name: Check for new or updated versions
+              run: |
+                jq --slurpfile map map.json '
+                    [
+                        .[]
+                        | { id, downloads }
+                        | select(
+                            ($map[0] | has(.id) | not)
+                            or
+                            ($map[0][.id].downloads != .downloads)
+                        )
+                    ]
+                    ' versions.json > delta_versions.json
+
+                cat delta_versions.json
 
             # Check if there are updated versions (e.g., increased download counts)
             #- name: Check for updated versions
