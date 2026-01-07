@@ -44,10 +44,10 @@ jobs:
                     ($current_versions[0] // {}) as $cur
                     | [
                         .[]
-                        | select(.id? != null)
+                        | select(.id != null)
                         | { id, downloads }
                         | select(
-                            ($cur | has(.id) | not)
+                            (($cur[.id] // null) == null)
                             or
                             (($cur[.id].downloads // -1) != .downloads)
                             )
