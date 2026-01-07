@@ -2,7 +2,7 @@ name: Modrinth release -> Discord (embed)
 
 on:
   schedule:
-    - cron: "*/15 * * * *"
+    - cron: "* * 1 * *"
   workflow_dispatch:
 
 jobs:
@@ -11,20 +11,30 @@ jobs:
     permissions:
       contents: read
 
+
     steps:
+        # Install jq for JSON processing
       - name: Install jq
         run: sudo apt-get update && sudo apt-get install -y jq
 
+        # The map of Modrinth version IDs to Discord message IDs is stored in a repository variable
+        # This is used to track which versions have already been announced, 
+        # and to update messages if the downloads count changes
+      - name: Load version map from repository variable
+        run: |
+          echo "Current state of MODRINTH_VERSION_MESSAGES_JSON: ${{ vars.MODRINTH_VERSION_MESSAGES_JSON }}"
+          map = '{}'
+
+
       - name: Sync Modrinth versions -> Discord (create/edit + GC)
         env:
-          WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_URL }}
-          ROLE_ID: "1451591252607893614"
-
-          MAP_JSON: ${{ vars.MODRINTH_VERSION_MESSAGES_JSON }}
-
           GH_PAT: ${{ secrets.GH_PAT }}
           OWNER: ${{ github.repository_owner }}
           REPO: ${{ github.event.repository.name }}
+
+          WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          ROLE_ID: ${{ vars.DISCORD_MODPACK_UPDATES_ROLE_ID}}
+          MAP_JSON: ${{ vars.MODRINTH_VERSION_MESSAGES_JSON }}
         run: |
           set -euo pipefail
 
