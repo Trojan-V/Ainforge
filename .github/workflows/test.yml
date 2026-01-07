@@ -29,7 +29,7 @@ jobs:
 
             # Output: File 'current_versions.json' containing the list of versions seen in the last run
             - name: Load Stored Versions
-              run: echo "${{ vars.MODRINTH_VERSION_MESSAGES_JSON }}" > current_versions.json
+              run: printf '%s' "${MODRINTH_VERSION_MESSAGES_JSON}" > current_versions.json
 
             # Check if there are new versions since the last run
             # For that, compare the fetched versions file against a stored list in a repository variable
