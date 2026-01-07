@@ -35,6 +35,8 @@ jobs:
             # For that, compare the fetched versions file against a stored list in a repository variable
             - name: Check for new or updated versions
               run: |
+                cat current_versions.json
+
                 jq --slurpfile current_versions current_versions.json '
                     [
                         .[]
