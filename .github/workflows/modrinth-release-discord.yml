@@ -2,7 +2,7 @@ name: Modrinth release -> Discord (embed)
 
 on:
   schedule:
-    - cron: "* * 1 * *"
+    - cron: "0/30 * * * *"
   workflow_dispatch:
 
 jobs:
