@@ -35,14 +35,14 @@ jobs:
             # For that, compare the fetched versions file against a stored list in a repository variable
             - name: Check for new or updated versions
               run: |
-                jq --slurpfile map map.json '
+                jq --slurpfile current_versions current_versions.json '
                     [
                         .[]
                         | { id, downloads }
                         | select(
-                            ($map[0] | has(.id) | not)
+                            ($current_versions[0] | has(.id) | not)
                             or
-                            ($map[0][.id].downloads != .downloads)
+                            ($current_versions[0][.id].downloads != .downloads)
                         )
                     ]
                     ' versions.json > delta_versions.json
