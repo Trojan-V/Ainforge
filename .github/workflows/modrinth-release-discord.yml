@@ -109,7 +109,7 @@ jobs:
           }
 
           # 3) Iterate each version in the GC window
-          echo "$versions" | jq -c '.[]' | while read -r v; do
+          while read -r v; do
             version_id=$(echo "$v" | jq -r '.id')
             version_name=$(echo "$v" | jq -r '.name')
 
@@ -123,8 +123,6 @@ jobs:
 
             if [ "$has_entry" != "true" ]; then
               payload=$(build_payload "$version_id" "$version_number" "$version_name" "$date_published" "$downloads" "true")
-
-              # wait=true returns created message object including id. [Discord] [web:10]
               resp=$(curl -fsSL -H "Content-Type: application/json" -d "$payload" "$WEBHOOK?wait=true")
               message_id=$(echo "$resp" | jq -r '.id')
 
@@ -142,19 +140,15 @@ jobs:
 
             if [ "$downloads" != "$old_downloads" ]; then
               payload=$(build_payload "$version_id" "$version_number" "$version_name" "$date_published" "$downloads" "false")
-
-              # Edit webhook message endpoint. [web:10]
-              curl -fsSL -X PATCH \
-                -H "Content-Type: application/json" \
-                -d "$payload" \
-                "$WEBHOOK/messages/$message_id"
+              curl -fsSL -X PATCH -H "Content-Type: application/json" -d "$payload" "$WEBHOOK/messages/$message_id"
 
               updated_map=$(echo "$updated_map" | jq \
                 --arg vid "$version_id" \
                 --argjson dl "$downloads" \
                 '.[$vid].downloads = $dl')
             fi
-          done
+          done < <(echo "$versions" | jq -c '.[]')
+
 
           # 4) Garbage collection: keep only entries whose versionId is still in allowed_ids
           updated_map=$(echo "$updated_map" | jq --argjson allowed "$allowed_ids" '
