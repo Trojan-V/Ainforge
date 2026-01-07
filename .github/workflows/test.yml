@@ -23,16 +23,11 @@ jobs:
             - name: Install jq
               run: sudo apt-get update && sudo apt-get install -y jq
 
-            # Output: Variable 'MODRINTH_PROJECT_VERSION_LIST' containing the list of all Modrinth versions
+            # Output: File 'versions.json' containing the list of all Modrinth versions
             - name: Fetch Modrinth Versions
               run: | 
-                delim="EOF_$(date +%s)_$RANDOM"
-
-                {
-                    echo "MODRINTH_PROJECT_VERSION_LIST<<$delim"
-                    curl -fsSL "$MODRINTH_LIST_ALL_VERSIONS_ENDPOINT"
-                    echo "$delim"
-                } >> "$GITHUB_ENV"
+                curl -fsSL "$MODRINTH_LIST_ALL_VERSIONS_ENDPOINT" -o versions.json
+                echo "Smoke: versions.json bytes=$(wc -c < versions.json), entries=$(jq 'length' versions.json)"
 
             - name: Debug Output fetched Modrinth versions
               run: echo "$MODRINTH_PROJECT_VERSION_LIST"
