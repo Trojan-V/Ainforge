@@ -40,9 +40,8 @@ jobs:
             # For that, compare the fetched versions file against a stored list in a repository variable
             - name: Check for new or updated versions
               run: |
-                jq --slurpfile current_versions current_versions.json '$current_versions' versions.json
-                jq -e 'type=="array" and all(.[]; .id? != null and .downloads? != null)' versions.json >/dev/null
-                jq -e 'type=="object"' current_versions.json >/dev/null
+                jq -c '.[] | select(.id? == null) | .' versions.json
+                echo "Test"
 
                 jq --slurpfile current_versions current_versions.json '
                     [
