@@ -1,8 +1,8 @@
 name: Sync Modrinth Releases to Discord Channel
 
 on:
-    schedule:
-        - cron: "0/30 * * * *"
+    #schedule:
+    #    - cron: "0/30 * * * *"
     workflow_dispatch:
         # No configuration needed, just makes the workflow manually triggerable from the Actions tab on GitHub
 
