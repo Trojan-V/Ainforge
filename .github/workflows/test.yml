@@ -26,18 +26,20 @@ jobs:
 
             # Output: File 'versions.json' containing the list of all Modrinth versions
             - name: Fetch Modrinth Versions
-              run: curl -fsSL "$MODRINTH_LIST_ALL_VERSIONS_ENDPOINT" -o versions.json
+              run: |
+                curl -fsSL "$MODRINTH_LIST_ALL_VERSIONS_ENDPOINT" -o versions.json
+                cat versions.json
 
             # Output: File 'current_versions.json' containing the list of versions seen in the last run
             - name: Load Stored Versions
-              run: printf '%s' "${MODRINTH_VERSION_MESSAGES_JSON}" > current_versions.json
+              run: |
+                printf '%s' "${MODRINTH_VERSION_MESSAGES_JSON}" > current_versions.json
+                cat current_versions.json
 
             # Check if there are new versions since the last run
             # For that, compare the fetched versions file against a stored list in a repository variable
             - name: Check for new or updated versions
               run: |
-                cat current_versions.json
-
                 jq --slurpfile current_versions current_versions.json '
                     [
                         .[]
@@ -52,9 +54,6 @@ jobs:
 
                 cat delta_versions.json
 
-            # Check if there are updated versions (e.g., increased download counts)
-            #- name: Check for updated versions
-            #  run:
 
             # For each new version, send a notification to the Discord channel via webhook
             #- name: Notify Discord of New Versions
