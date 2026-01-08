@@ -17,6 +17,9 @@ jobs:
         env:
             MODRINTH_LIST_ALL_VERSIONS_ENDPOINT: "https://api.modrinth.com/v2/project/ainforge/version"
             MODRINTH_VERSION_MESSAGES_JSON: ${{ vars.MODRINTH_VERSION_MESSAGES_JSON }}
+            ALL_VERSIONS_FILE: "all_versions.json"
+            CURRENT_VERSIONS_FILE: "current_versions.json"
+            DELTA_VERSIONS_FILE: "delta_versions.json"
             
 
         steps:
@@ -24,42 +27,53 @@ jobs:
             - name: Install jq
               run: sudo apt-get update && sudo apt-get install -y jq
 
-            # Output: File 'versions.json' containing the list of all Modrinth versions
+            # Output: File 'all_versions.json' containing the list of all Modrinth versions
             - name: Fetch Modrinth Versions
-              run: |
-                curl -fsSL "$MODRINTH_LIST_ALL_VERSIONS_ENDPOINT" -o versions.json
-                jq -r '.[].id' versions.json
+              run: curl -fsSL "$MODRINTH_LIST_ALL_VERSIONS_ENDPOINT" -o ${ALL_VERSIONS_FILE}
 
             # Output: File 'current_versions.json' containing the list of versions seen in the last run
             - name: Load Stored Versions
-              run: |
-                printf '%s' "${MODRINTH_VERSION_MESSAGES_JSON}" > current_versions.json
-                cat current_versions.json
+              run: printf '%s' "${MODRINTH_VERSION_MESSAGES_JSON}" > ${CURRENT_VERSIONS_FILE}
 
             # Check if there are new versions since the last run
             # For that, compare the fetched versions file against a stored list in a repository variable
             - name: Check for new or updated versions
               run: |
-                jq --slurpfile current_versions current_versions.json '
-                    ($current_versions[0] // {}) as $cur
+                jq --slurpfile current_versions ${CURRENT_VERSIONS_FILE} '
+                    ($current_versions[0]) as $cur
                     | [
                         .[]
-                        | select(.id != null)
                         | { id, downloads }
                         | select(
-                            (($cur[.id] // null) == null)
+                            (($cur[.id]) == null)
                             or
-                            (($cur[.id].downloads // -1) != .downloads)
+                            (($cur[.id].downloads) != .downloads)
                             )
                         ]
-                    ' versions.json > delta_versions.json
+                    ' ${ALL_VERSIONS_FILE} > ${DELTA_VERSIONS_FILE}
+                    
+                    echo "All versions file:"
+                    cat ${ALL_VERSIONS_FILE}
+                    echo "------------------------"
+                    echo " "
+                    echo "Current versions file:"
+                    cat ${CURRENT_VERSIONS_FILE}
+                    echo "------------------------"
+                    echo " "
+                    echo "Delta versions file:"
+                    cat ${DELTA_VERSIONS_FILE}
 
-
-                cat delta_versions.json
-
-
-            # For each new version, send a notification to the Discord channel via webhook
+            # For each new version, send a notification to the Discord channel via webhook 
+            # and store the ID, message ID and downloads count in a JSON structure
             #- name: Notify Discord of New Versions
+            #  run:
+
+            # For each updated version (downloads count changed), edit the existing Discord message via webhook
+            #- name: Update Discord Messages for Updated Versions
+            #  run:
+
+            # Finally, update the repository variable with the new state of version IDs, message IDs and download counts
+            #- name: Update Repository Variable with New Version State
             #  run:
 
             
