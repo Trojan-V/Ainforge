@@ -17,63 +17,179 @@ jobs:
         env:
             MODRINTH_LIST_ALL_VERSIONS_ENDPOINT: "https://api.modrinth.com/v2/project/ainforge/version"
             MODRINTH_VERSION_MESSAGES_JSON: ${{ vars.MODRINTH_VERSION_MESSAGES_JSON }}
+
             ALL_VERSIONS_FILE: "all_versions.json"
             CURRENT_VERSIONS_FILE: "current_versions.json"
-            DELTA_VERSIONS_FILE: "delta_versions.json"
-            
+            NEW_VERSIONS_FILE: "new_versions.json"
+            DOWNLOADS_CHANGED_VERSIONS_FILE: "downloads_changed_versions.json"
+
+            DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+            DISCORD_MODPACK_UPDATES_ROLE_ID: ${{ vars.DISCORD_MODPACK_UPDATES_ROLE_ID }}
+            DISCORD_MESSAGE_PAYLOAD_FILE: "discord_message_payload.json"
+
 
         steps:
-            # Install jq for JSON processing
-            - name: Install jq
-              run: sudo apt-get update && sudo apt-get install -y jq
-
             # Output: File 'all_versions.json' containing the list of all Modrinth versions
             - name: Fetch Modrinth Versions
+              shell: bash
               run: curl -fsSL "$MODRINTH_LIST_ALL_VERSIONS_ENDPOINT" -o ${ALL_VERSIONS_FILE}
 
             # Output: File 'current_versions.json' containing the list of versions seen in the last run
             - name: Load Stored Versions
+              shell: bash
               run: printf '%s' "${MODRINTH_VERSION_MESSAGES_JSON}" > ${CURRENT_VERSIONS_FILE}
 
-            # Check if there are new versions since the last run
-            # For that, compare the fetched versions file against a stored list in a repository variable
-            - name: Check for new or updated versions
+            # Check for new versions
+            - name: Check for new versions
+              shell: bash
               run: |
-                jq --slurpfile current_versions ${CURRENT_VERSIONS_FILE} '
-                    ($current_versions[0]) as $cur
+                jq --slurpfile current_versions_array ${CURRENT_VERSIONS_FILE} '
+                    ($current_versions_array[0]) as $current_version
                     | [
                         .[]
-                        | { id, downloads }
-                        | select(
-                            (($cur[.id]) == null)
-                            or
-                            (($cur[.id].downloads) != .downloads)
-                            )
-                        ]
-                    ' ${ALL_VERSIONS_FILE} > ${DELTA_VERSIONS_FILE}
-                    
-                    echo "All versions file:"
-                    cat ${ALL_VERSIONS_FILE}
-                    echo "------------------------"
-                    echo " "
-                    echo "Current versions file:"
-                    cat ${CURRENT_VERSIONS_FILE}
-                    echo "------------------------"
-                    echo " "
-                    echo "Delta versions file:"
-                    cat ${DELTA_VERSIONS_FILE}
+                        | { id, downloads, name, version_number, date_published }
+                        | select(($current_version[.id]) == null)
+                      ]
+                    ' ${ALL_VERSIONS_FILE} > ${NEW_VERSIONS_FILE}
 
-            # For each new version, send a notification to the Discord channel via webhook 
-            # and store the ID, message ID and downloads count in a JSON structure
-            #- name: Notify Discord of New Versions
-            #  run:
+            - name: Check for updated versions
+              shell: bash
+              run: |
+                  jq --slurpfile current_versions_array ${CURRENT_VERSIONS_FILE} '
+                      ($current_versions_array[0]) as $current_version
+                      | [
+                          .[]
+                          | { id, downloads, name, version_number, date_published }
+                          | select(
+                              (($current_version[.id]) != null)
+                              and
+                              (($current_version[.id].downloads) != .downloads)
+                              )
+                          ]
+                      ' ${ALL_VERSIONS_FILE} > ${DOWNLOADS_CHANGED_VERSIONS_FILE}
 
-            # For each updated version (downloads count changed), edit the existing Discord message via webhook
-            #- name: Update Discord Messages for Updated Versions
-            #  run:
+                      echo "Downloads Changed Versions:"
+                      cat ${DOWNLOADS_CHANGED_VERSIONS_FILE}
 
-            # Finally, update the repository variable with the new state of version IDs, message IDs and download counts
-            #- name: Update Repository Variable with New Version State
-            #  run:
+            - name: Create Build Discord Payload Script
+              shell: bash
+              run: |
+                cat << 'EOF' > build_payload.sh
+                build_payload () {
+                  local role_id="$1"
+                  local version_id="$2"
+                  local version_number="$3"
+                  local date_published="$4"
+                  local downloads="$5"
 
-            
+                  jq -n \
+                    --arg role "<@&$role_id>" \
+                    --arg roleId "$role_id" \
+                    --arg title "Ainforge $version_number released!" \
+                    --arg url "https://modrinth.com/modpack/ainforge/version/$version_id" \
+                    --arg desc "**[Open Changelog](https://modrinth.com/modpack/ainforge/changelog)**" \
+                    --arg timestamp "$date_published" \
+                    --arg v "$version_number" \
+                    --arg d "$downloads" \
+                    '{
+                      content: $role,
+                      allowed_mentions: { roles: [$roleId] },
+                      username: "Ainforge Releases",
+                      embeds: [
+                        {
+                          title: $title,
+                          url: $url,
+                          description: $desc,
+                          color: 3447003,
+                          timestamp: $timestamp,
+                          fields: [
+                            { name: "Version", value: $v, inline: true },
+                            { name: "Downloads", value: $d, inline: true }
+                          ],
+                          footer: { text: "Made by trojan_de" }
+                        }
+                      ]
+                    }'
+                }
+                EOF
+
+                cat build_payload.sh
+
+            - name: Update Discord Messages for Updated Versions
+              shell: bash
+              run: |
+                source build_payload.sh
+
+                jq -c '.[]' downloads_changed_versions.json | while read -r item; do
+                  version_id="$(echo "$item" | jq -r '.id')"
+                  new_downloads="$(echo "$item" | jq -r '.downloads')"
+                  version_number="$(echo "$item" | jq -r '.version_number')"
+                  date_published="$(echo "$item" | jq -r '.date_published')"
+                  message_id="$(jq -r --arg version_id "$version_id" '.[$version_id].message_id' current_versions.json)"
+
+                  payload="$(build_payload \
+                    "$DISCORD_MODPACK_UPDATES_ROLE_ID" \
+                    "$version_id" \
+                    "$version_number" \
+                    "$date_published" \
+                    "$new_downloads"
+                  )"
+
+                  curl -X PATCH \
+                    -H "Content-Type: application/json" \
+                    -d "$payload" \
+                    "${DISCORD_WEBHOOK_URL}/messages/${message_id}"
+
+                done
+
+            - name: Notify Discord of New Versions
+              shell: bash
+              run: |
+                echo "New versions":
+                echo "$(cat new_versions.json)"
+                source build_payload.sh
+
+                jq -c '.[]' new_versions.json | while read -r item; do
+                  version_id="$(echo "$item" | jq -r '.id')"
+                  downloads="$(echo "$item" | jq -r '.downloads')"
+                  version_number="$(echo "$item" | jq -r '.version_number')"
+                  date_published="$(echo "$item" | jq -r '.date_published')"
+
+                  payload="$(build_payload \
+                    "$DISCORD_MODPACK_UPDATES_ROLE_ID" \
+                    "$version_id" \
+                    "$version_number" \
+                    "$date_published" \
+                    "$downloads"
+                  )"
+
+                  response="$(curl -fsSL -H "Content-Type: application/json" -d "$payload" \
+                    -w "\nHTTP=%{http_code}\n" \
+                    "${DISCORD_WEBHOOK_URL}?wait=true")"
+                  echo "$response"
+
+                  message_id="$(printf '%s\n' "$response" | head -n1 | jq -r '.id')"
+                  echo "Sent message ID: $message_id for version ID: $version_id"
+
+                  # Update current_versions.json with the new version entry
+                  jq --arg vid "$version_id" --arg mid "$message_id" --argjson dl "$downloads" \
+                    '. + {($vid): {message_id: $mid, downloads: $dl}}' \
+                    current_versions.json > temp_current_versions.json && mv temp_current_versions.json current_versions.json
+
+                    echo "$(cat current_versions.json)"
+                done
+
+            - name: Update repo variable MODRINTH_VERSION_MESSAGES_JSON
+              shell: bash
+              env:
+                GH_PAT: ${{ secrets.GH_PAT }}
+                GITHUB_REPOSITORY: Trojan-V/Ainforge
+              run: |
+                value="$(jq -c '.' current_versions.json)"
+
+                curl -fsSL -X PATCH \
+                  -H "Accept: application/vnd.github+json" \
+                  -H "Authorization: Bearer $GH_PAT" \
+                  -H "X-GitHub-Api-Version: 2022-11-28" \
+                  "https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/variables/MODRINTH_VERSION_MESSAGES_JSON" \
+                  -d "$(jq -n --arg name "MODRINTH_VERSION_MESSAGES_JSON" --arg value "$value" '{name:$name, value:$value}')"
