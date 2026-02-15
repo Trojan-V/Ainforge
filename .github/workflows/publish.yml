@@ -38,7 +38,7 @@ jobs:
           name: 'Ainforge-${{ env.VERSION }}'
           version: ${{ env.VERSION }}
           version-type: release
-          changelog-file: CHANGELOG.md
+          changelog-file: changelogs/${{ env.VERSION }}.md
           loaders: |
             fabric
           game-versions: |
