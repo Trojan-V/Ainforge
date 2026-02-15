@@ -1,10 +1,6 @@
 hash-format = "sha256"
 
 [[files]]
-file = "CHANGELOG.md"
-hash = "dea40210665f2e0fde37b45a6489fc6295eb8e6442a531e517e65cb15bfe75b1"
-
-[[files]]
 file = "ESM/soundsMuffled.dat"
 hash = "b6204127646d436cb8fbe9a9e2b3d1f92e0931e22f19b5754a8bd79d0f99835f"
 
@@ -15,6 +11,18 @@ hash = "da5c767b8885dc47b173f76772b4f6add8e68dec67228580442a1c2b4772b01b"
 [[files]]
 file = "README.md"
 hash = "594f56b906b9d79fe3c8bdcb2538a0a38b85569de5a2a7763956167023b8e3cc"
+
+[[files]]
+file = "changelogs/changelog-1.0.0.md"
+hash = "898073eab08d230159aa5819d0cad48ba01285e06c7a7f582467ffa74b4c9702"
+
+[[files]]
+file = "changelogs/changelog-2.0.0.md"
+hash = "1dff84b16d18475581682ab5b579ad82a6053d607965bd026ce0d0bfa23dc4e7"
+
+[[files]]
+file = "changelogs/changelog-2.1.0.md"
+hash = "e7049d3340e319a107afb9b4b3e7766d986186b3da3e26d37fd4f7b2f61450a5"
 
 [[files]]
 file = "config/DistantHorizons.toml"
@@ -30,7 +38,7 @@ hash = "ddc1f3ea03ffc60b78810b4d29892c5c904f00b3ed877e75cdd72e2a5e8009bd"
 
 [[files]]
 file = "config/cclive-utilities.json"
-hash = "578eb70a2f3c8934c4317b6a028fc834e6068161d88f2841913f7ca9e7c12e0f"
+hash = "562c56066586cf01dcc429158836ddb347bdac450529da4e32753cd1cc6ea22d"
 
 [[files]]
 file = "config/chatnotify.json"
@@ -312,7 +320,7 @@ metafile = true
 
 [[files]]
 file = "mods/chatnotify.pw.toml"
-hash = "e1a35619ddbe24dd296344e1c57c9797e8f44bdb93261938dc51800b73399edf"
+hash = "b82be3b47d2c02774211f83e08e5602cf17d69bb0f04dcfb3718155d20358420"
 metafile = true
 
 [[files]]
@@ -327,7 +335,7 @@ metafile = true
 
 [[files]]
 file = "mods/commandkeys.pw.toml"
-hash = "2f2b854407ca786629b04fd2c96e9083f92b0e4f6eba7b4232a902b21fe9a135"
+hash = "be5ad8c42f54f77c573dc4cdb05b58243304ca2179f802dafc7030d9809a4072"
 metafile = true
 
 [[files]]
@@ -347,7 +355,7 @@ metafile = true
 
 [[files]]
 file = "mods/euphoria-patches.pw.toml"
-hash = "76ba469ba67cdf17276da7a629ff85518f4c1dfaaae5ad28d9ee2d6bc79439c5"
+hash = "ff52d093b7eb904e076efac1a26971eaa408d6bcbc2f2faefc762e436743f1de"
 metafile = true
 
 [[files]]
@@ -362,7 +370,7 @@ metafile = true
 
 [[files]]
 file = "mods/fabric-language-kotlin.pw.toml"
-hash = "61afd7af5c645ffd966b2bd86be944eacd1e48a8044e8f67082225d4d9989f0c"
+hash = "408151861cc1b1a4c4e9c8a3550662a2fc36d0ea96ee07b7e96c5d2a6afacf6f"
 metafile = true
 
 [[files]]
@@ -372,7 +380,7 @@ metafile = true
 
 [[files]]
 file = "mods/fancy-entity-renderer.pw.toml"
-hash = "c33372d34068b826d8eb665ec747459275fb06ba74f8a317aa162b4a5d8a2011"
+hash = "82dbbd809d51841fc2c7c4ab0afe753e586d638b1369467f32acc8f167bb5b42"
 metafile = true
 
 [[files]]
@@ -382,7 +390,7 @@ metafile = true
 
 [[files]]
 file = "mods/ferrite-core.pw.toml"
-hash = "fbf9806c22ee5bccbe08f7dec15b742f5ae3a70caf186d6dce0d42f28790f559"
+hash = "58d01821618f01d70700ef0918a3e698cdc874926183e59be420df2021493b1c"
 metafile = true
 
 [[files]]
@@ -392,7 +400,7 @@ metafile = true
 
 [[files]]
 file = "mods/fzzy-config.pw.toml"
-hash = "959457f4755ab57336e2e23628acb52cc90a72a6e8877294f2bdb21231f82569"
+hash = "d92eb3e33f1ecd978c9c8e3840a5aefdab97d3c56301fdd3f1cd8f986dc1bf93"
 metafile = true
 
 [[files]]
@@ -402,7 +410,7 @@ metafile = true
 
 [[files]]
 file = "mods/immediatelyfast.pw.toml"
-hash = "7aac72ca216e1811cfab54cbae47fae18138b4e358620455fbb1bf4b2ff31682"
+hash = "a13eefb56cfa3dc283c9c5f0568d319d0c4ac60b9cb63e23cc9155d34513ef21"
 metafile = true
 
 [[files]]
@@ -437,7 +445,7 @@ metafile = true
 
 [[files]]
 file = "mods/modmenu.pw.toml"
-hash = "6eea5e1db3dbca126b82f211bf0d2fcf2cf13097023fdef3dd668e48581a73d0"
+hash = "e92d199e6d874cf21bbff4c1f6cf6709129927d925be8f62be7514e6317396ca"
 metafile = true
 
 [[files]]
@@ -452,7 +460,7 @@ metafile = true
 
 [[files]]
 file = "mods/particle-core.pw.toml"
-hash = "4ed5bf9e808739ddeec2692fbd7c16b3df653f1b2823de3f07e5dced1c5fc439"
+hash = "c35b01442e935507d657699d75017ed8c939de67d65a38cf1ae4926e9d56762e"
 metafile = true
 
 [[files]]
@@ -462,7 +470,7 @@ metafile = true
 
 [[files]]
 file = "mods/resourcify.pw.toml"
-hash = "45ba29f2246237e7a5f85dbdbdb1f6472962f834a3d52e75786eb64a771bcf96"
+hash = "52ae2383290f6fa892055539500b644a2687af4ca64d2f78f2de46a61ed20373"
 metafile = true
 
 [[files]]
@@ -487,17 +495,17 @@ metafile = true
 
 [[files]]
 file = "mods/xaeros-minimap.pw.toml"
-hash = "17bfc25b3763413efbfcd5ae12fd2bc9cc82e241fc47e2921978b55f3ff5bcec"
+hash = "54eff15de5595c262a3239ffa404ad6cb0d8e916bd1077658e530d8a88a01765"
 metafile = true
 
 [[files]]
 file = "mods/xaeros-world-map.pw.toml"
-hash = "079cf592a9a7b0105a5f6415091780453acca6a3173276eceed56d019821a6c6"
+hash = "bf273b7cd4cd05eac11578f872974f507bca7cb6ba779641e0090d879b3ab7f5"
 metafile = true
 
 [[files]]
 file = "mods/yacl.pw.toml"
-hash = "ec4a4b88462c742ea3bbd812dbbe321381b974bf9dd34bbb4f7d206dadc9a556"
+hash = "c96e6f37f930d1dde6543566d2c4f56a9a40eae2c1f75ec5b2a3cd214e0af351"
 metafile = true
 
 [[files]]
@@ -507,7 +515,7 @@ metafile = true
 
 [[files]]
 file = "mods/zoomify.pw.toml"
-hash = "59e45ade7176229ff9750ae85356ba4a92b5124592dd09b0244c861cfda08575"
+hash = "649b3aaa4796a44eeba2649c6cb9007c9fba2569d804589459ba98c38dcbd2b6"
 metafile = true
 
 [[files]]
@@ -684,13 +692,17 @@ hash = "c2659a26e29a5b99234095cff4cec81da3528d14e6e746e25ef0534fbf5112e6"
 metafile = true
 
 [[files]]
+file = "scripts/build_payload.sh"
+hash = "17548fb609681760d64a98ae524b6291add02388b38f92dedbb9bfbbb00198d5"
+
+[[files]]
 file = "shaderpacks/complementary-reimagined.pw.toml"
-hash = "531a8d239c952428d9a633ff99cb03461656ada28decbe2e1ef19f60f7fd5726"
+hash = "b769a2f7ef2fa754224c5068491e79d02c0c85e0bc326fc05247f18315cc866b"
 metafile = true
 
 [[files]]
 file = "shaderpacks/complementary-unbound.pw.toml"
-hash = "134b3cee2ac2b5c5b9d02d8d70e8e4ba32c7c241f5bc51209521831a7c254e22"
+hash = "5caf93fa1624aeb26d11cdbadcb0c03b2a92815c798a930014774c7d525baf28"
 metafile = true
 
 [[files]]
